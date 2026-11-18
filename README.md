@@ -76,7 +76,7 @@ To add or edit a single question, edit its per-year file and run the merge again
 
 - **Solutions:** Every question card features a `📚 Solution` option. You can view, add, or edit solutions directly in the browser with live Write/Preview tabs (supporting Markdown and KaTeX math). Solutions edited in the browser persist in `localStorage`. You can also supply a `"solution"` string directly in your per-year question JSON.
 - Filter and toggle options: Use the **"Has solution"** filter to find questions with answers, and the **"Show solutions 📚"** toggle button to expand all solutions at once.
-- **Save / Favorite & Profile:** Click the star icon (`☆` / `★`) on any question card to save it to your Favorites. The top-right **Profile** link opens your profile dashboard with dedicated lists for **Favorites**, **Solved**, and **Has Solution** questions, complete with progress statistics.
+- **Save / Favorite & Archive:** Click the star icon (`☆` / `★`) on any question card to save it to your Favorites. The top-right **Archive** link opens your personal archive with dedicated lists for **Favorites**, **Solved**, and **Has Solution** questions, complete with revision statistics.
 - Lecture numbers are **not** stored. A question appears in every lecture that one of its keywords belongs to.
 - `part` can be `null`, `"b"` or `"(b)"`. `co` can be `null` (hidden), `"CO4"` or `4`.
 - `type` is free text (`theory`, `design`, `conversion`, `proof`, `short-note`, or anything new); the type filter is
@@ -117,7 +117,7 @@ with your real lecture/keyword list (keep keywords starting with `#`), add your 
 | `#/s/toc/l/5` | Lecture: keyword sidebar, filters, question cards |
 | `#/s/toc/l/5?k=%23CNF&year=2021&type=proof&rep=1&hide=1&order=old` | Same, with filters (the URL updates as you filter, so any view can be shared) |
 | `#/s/toc/search?q=cfg` | Search across the whole subject |
-| `#/s/toc/profile` | Profile: Favorite questions, Solved questions, Has Solution list & stats |
+| `#/s/toc/archive` | Archive: Favorite questions, Solved questions, Has Solution list & stats |
 
 - **Lecture sidebar:** click keywords to filter (multi-select, click again to deselect, "All keywords" to reset).
   The counts follow the current year / type / repeated / hide-solved filters. On phones it is a collapsible panel.

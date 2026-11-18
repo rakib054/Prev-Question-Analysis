@@ -376,14 +376,14 @@ function hintBox(message, ds, run) {
 }
 
 // ============================================================================
-// Profile  #/profile or #/s/:id/profile?tab=favorites|solved|solutions
+// Archive  #/archive or #/s/:id/archive?tab=favorites|solved|solutions
 // ============================================================================
 export async function profilePage(root, subjectId, params) {
   const subjects = await loadSubjects();
   const sid = subjectId || subjects[0]?.id || 'toc';
   const ds = await loadSubject(sid);
 
-  setTitle('My Profile', ds.subject.name);
+  setTitle('Archive', ds.subject.name);
 
   const state = {
     tab: ['favorites', 'solved', 'solutions'].includes(params.get('tab')) ? params.get('tab') : 'favorites',
@@ -520,7 +520,7 @@ export async function profilePage(root, subjectId, params) {
         h('a', { class: 'btn primary', href: hashUrl(['s', sid]) }, 'Browse Questions')));
     }
 
-    replaceHash(hashUrl(['s', sid, 'profile'], {
+    replaceHash(hashUrl(['s', sid, 'archive'], {
       tab: state.tab, order: state.oldest ? 'old' : '', showsol: state.showAllSol ? '1' : '',
     }));
   }
@@ -528,9 +528,9 @@ export async function profilePage(root, subjectId, params) {
   const profileToolbar = h('div', { class: 'profile-toolbar' }, tabsNav, h('div', { class: 'profile-actions' }, toggleAllSolBtn, orderBtn));
 
   root.replaceChildren(
-    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name, href: hashUrl(['s', sid]) }, { label: 'Profile' }]),
+    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name, href: hashUrl(['s', sid]) }, { label: 'Archive' }]),
     h('div', { class: 'page-head profile-head' },
-      h('h1', null, 'My Profile & Lists'),
+      h('h1', null, 'Archive & Saved Questions'),
       h('p', { class: 'muted' }, `${ds.subject.name} · Track your revision progress and bookmarked questions.`)),
     statsGrid,
     profileToolbar,

@@ -80,11 +80,6 @@ main.wrap { padding-top: 16px; padding-bottom: 64px; min-height: 70vh; }
   background: var(--border); border-color: var(--accent);
 }
 .profile-icon { font-size: 1rem; }
-.profile-badge {
-  display: inline-grid; place-items: center; min-width: 18px; height: 18px;
-  padding: 0 5px; border-radius: 999px; background: #e5a100; color: #fff;
-  font-size: .75rem; font-weight: 800; line-height: 1;
-}
 
 /* ---------- common bits ---------- */
 .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .9rem; color: var(--muted); margin-bottom: 12px; }

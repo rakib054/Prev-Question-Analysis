@@ -1,34 +1,21 @@
 // Entry point: hash router. Routes:
 //   #/                      home
-//   #/profile               profile (all saved/solved/solutions)
+//   #/archive               archive (all saved/solved/solutions)
 //   #/s/<subject>           subject (lecture grid)
 //   #/s/<subject>/l/<n>     lecture
 //   #/s/<subject>/search    search (?q=…&k=#Keyword)
-//   #/s/<subject>/profile   profile for subject
+//   #/s/<subject>/archive   archive for subject
 import { h, scrollToTop } from './util.js';
 import { homePage, subjectPage, lecturePage, searchPage, profilePage, notFoundPage } from './pages.js';
-import { favoriteCount, onFavoriteChange } from './store.js';
 
 const app = document.getElementById('app');
 const profileLink = document.querySelector('.profile-link');
-const profileBadge = document.getElementById('header-fav-count');
 
-function updateHeaderProfile(currentSubject = 'toc') {
+function updateHeaderLink(currentSubject = 'toc') {
   if (profileLink) {
-    profileLink.href = currentSubject ? `#/s/${currentSubject}/profile` : '#/profile';
-  }
-  if (profileBadge) {
-    const count = favoriteCount(currentSubject || 'toc');
-    profileBadge.textContent = String(count);
-    profileBadge.hidden = count === 0;
+    profileLink.href = currentSubject ? `#/s/${currentSubject}/archive` : '#/archive';
   }
 }
-
-onFavoriteChange(() => {
-  const { parts } = parseHash();
-  const sid = (parts[0] === 's' && parts[1]) ? parts[1] : 'toc';
-  updateHeaderProfile(sid);
-});
 
 let token = 0;
 let lastRoute = '';
@@ -50,15 +37,15 @@ async function route() {
   lastRoute = routeKey;
 
   const currentSubject = (parts[0] === 's' && parts[1]) ? parts[1] : 'toc';
-  updateHeaderProfile(currentSubject);
+  updateHeaderLink(currentSubject);
 
   try {
     if (parts.length === 0) await homePage(app);
-    else if (parts[0] === 'profile') await profilePage(app, params.get('s') || 'toc', params);
+    else if (parts[0] === 'archive' || parts[0] === 'profile') await profilePage(app, params.get('s') || 'toc', params);
     else if (parts[0] === 's' && parts.length === 2) await subjectPage(app, parts[1]);
     else if (parts[0] === 's' && parts[2] === 'l' && parts.length === 4) await lecturePage(app, parts[1], parts[3], params);
     else if (parts[0] === 's' && parts[2] === 'search' && parts.length === 3) await searchPage(app, parts[1], params);
-    else if (parts[0] === 's' && parts[2] === 'profile' && parts.length === 3) await profilePage(app, parts[1], params);
+    else if (parts[0] === 's' && (parts[2] === 'archive' || parts[2] === 'profile') && parts.length === 3) await profilePage(app, parts[1], params);
     else notFoundPage(app);
   } catch (e) {
     if (my !== token) return;
