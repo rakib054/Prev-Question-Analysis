@@ -1,0 +1,743 @@
+{
+  "course": "Introduction to Theory of Computation",
+  "lectures": [
+    {
+      "lecture": 1,
+      "title": "Introduction",
+      "topics": [
+        {
+          "keyword": "#AutomataTheory",
+          "name": "What is Automata Theory?"
+        },
+        {
+          "keyword": "#History",
+          "name": "Theory of Computation: A Historical Perspective"
+        },
+        {
+          "keyword": "#LanguagesGrammars",
+          "name": "Languages & Grammars"
+        },
+        {
+          "keyword": "#ChomskyHierarchy",
+          "name": "The Chomsky Hierarchy"
+        },
+        {
+          "keyword": "#Alphabet",
+          "name": "Alphabet"
+        },
+        {
+          "keyword": "#Strings",
+          "name": "Strings"
+        },
+        {
+          "keyword": "#AlphabetPowers",
+          "name": "Powers of an Alphabet"
+        },
+        {
+          "keyword": "#Languages",
+          "name": "Languages"
+        },
+        {
+          "keyword": "#MembershipProblem",
+          "name": "The Membership Problem"
+        },
+        {
+          "keyword": "#FiniteAutomataIntro",
+          "name": "Finite Automata: Applications and Examples"
+        },
+        {
+          "keyword": "#StructuralExpressions",
+          "name": "Structural Expressions (Grammars, Regular Expressions)"
+        },
+        {
+          "keyword": "#DeductiveProofs",
+          "name": "Deductive Proofs"
+        },
+        {
+          "keyword": "#TheoremsLemmasCorollaries",
+          "name": "Theorems, Lemmas and Corollaries"
+        },
+        {
+          "keyword": "#Quantifiers",
+          "name": "Quantifiers"
+        },
+        {
+          "keyword": "#ProofTechniques",
+          "name": "Proving Techniques (Contradiction, Induction, Contrapositive, Counter-example)"
+        },
+        {
+          "keyword": "#IfThenForms",
+          "name": "Different Ways of Saying \"If H then C\""
+        },
+        {
+          "keyword": "#IffStatements",
+          "name": "If-and-Only-If Statements"
+        }
+      ]
+    },
+    {
+      "lecture": 2,
+      "title": "Finite Automata",
+      "topics": [
+        {
+          "keyword": "#FiniteAutomaton",
+          "name": "Finite Automaton (FA)"
+        },
+        {
+          "keyword": "#DFA",
+          "name": "Deterministic Finite Automata - Definition"
+        },
+        {
+          "keyword": "#DFAOperation",
+          "name": "What Does a DFA Do on Reading an Input String?"
+        },
+        {
+          "keyword": "#RegularLanguages",
+          "name": "Regular Languages"
+        },
+        {
+          "keyword": "#DFADesign",
+          "name": "DFA Design Examples (contains 01, 11, aab, aababb, odd 1s, even 0s and 1s)"
+        },
+        {
+          "keyword": "#ExtendedTransition",
+          "name": "Extension of Transitions (δ) to Paths"
+        },
+        {
+          "keyword": "#LanguageOfDFA",
+          "name": "Language of a DFA"
+        },
+        {
+          "keyword": "#NFA",
+          "name": "Non-deterministic Finite Automata (NFA)"
+        },
+        {
+          "keyword": "#NFAOperation",
+          "name": "How to Use an NFA?"
+        },
+        {
+          "keyword": "#ErrorState",
+          "name": "Error State / Dead State"
+        },
+        {
+          "keyword": "#NFADesign",
+          "name": "NFA Design Examples (ends in 01, keyword recognizer)"
+        },
+        {
+          "keyword": "#ExtendedTransitionNFA",
+          "name": "Extension of δ to NFA Paths"
+        },
+        {
+          "keyword": "#LanguageOfNFA",
+          "name": "Language of an NFA"
+        },
+        {
+          "keyword": "#NFAAdvantages",
+          "name": "Advantages & Caveats for NFA"
+        },
+        {
+          "keyword": "#NFATechnologies",
+          "name": "Technologies for NFAs"
+        },
+        {
+          "keyword": "#DFAvsNFA",
+          "name": "Differences: DFA vs. NFA"
+        },
+        {
+          "keyword": "#DFANFAEquivalence",
+          "name": "Equivalence of DFA & NFA"
+        },
+        {
+          "keyword": "#SubsetConstruction",
+          "name": "NFA to DFA by Subset Construction"
+        },
+        {
+          "keyword": "#LazyCreation",
+          "name": "NFA to DFA Using Lazy Creation of States"
+        },
+        {
+          "keyword": "#SubsetCorrectness",
+          "name": "Correctness of Subset Construction"
+        },
+        {
+          "keyword": "#StateBlowup",
+          "name": "Bad Case where #states(DFA) >> #states(NFA)"
+        },
+        {
+          "keyword": "#PigeonholePrinciple",
+          "name": "Pigeonhole Principle"
+        },
+        {
+          "keyword": "#TextSearchApplications",
+          "name": "Applications: Text Indexing and Pattern Search"
+        },
+        {
+          "keyword": "#FAProperties",
+          "name": "Subtle Properties of DFAs and NFAs"
+        },
+        {
+          "keyword": "#EpsilonNFA",
+          "name": "FA with ε-Transitions (ε-NFA)"
+        },
+        {
+          "keyword": "#ECLOSE",
+          "name": "ε-Closure (ECLOSE)"
+        },
+        {
+          "keyword": "#EpsilonNFASimulation",
+          "name": "Simulating an ε-NFA"
+        },
+        {
+          "keyword": "#EquivalenceDFANFAEpsilon",
+          "name": "Equivalence of DFA, NFA, ε-NFA"
+        },
+        {
+          "keyword": "#EliminateEpsilon",
+          "name": "Eliminating ε-Transitions (ε-NFA to DFA)"
+        }
+      ]
+    },
+    {
+      "lecture": 3,
+      "title": "Regular Expressions",
+      "topics": [
+        {
+          "keyword": "#RegExVsFA",
+          "name": "Regular Expressions vs. Finite Automata"
+        },
+        {
+          "keyword": "#LanguageOperators",
+          "name": "Language Operators (Union, Concatenation)"
+        },
+        {
+          "keyword": "#KleeneClosure",
+          "name": "Kleene Closure (* operator)"
+        },
+        {
+          "keyword": "#KleeneClosureNotes",
+          "name": "Kleene Closure Special Notes"
+        },
+        {
+          "keyword": "#BuildingRegEx",
+          "name": "Building Regular Expressions"
+        },
+        {
+          "keyword": "#RegExExample",
+          "name": "Example: No Two Consecutive 0s or 1s"
+        },
+        {
+          "keyword": "#OperatorPrecedence",
+          "name": "Precedence of Operators"
+        },
+        {
+          "keyword": "#FAandRegEx",
+          "name": "Finite Automata & Regular Expressions Equivalence (Kleene Theorem)"
+        },
+        {
+          "keyword": "#DFAtoRegEx",
+          "name": "DFA to Regular Expression Construction"
+        },
+        {
+          "keyword": "#RegExToEpsilonNFA",
+          "name": "Regular Expression to ε-NFA Construction"
+        },
+        {
+          "keyword": "#AlgebraicLaws",
+          "name": "Algebraic Laws of Regular Expressions"
+        },
+        {
+          "keyword": "#RegExTrueFalse",
+          "name": "True or False Regular Expression Identities"
+        }
+      ]
+    },
+    {
+      "lecture": 4,
+      "title": "Properties of Regular Languages",
+      "topics": [
+        {
+          "keyword": "#NonRegularLanguages",
+          "name": "Some Languages Are Not Regular"
+        },
+        {
+          "keyword": "#ProvingNonRegular",
+          "name": "How to Prove Languages Are Not Regular?"
+        },
+        {
+          "keyword": "#NonRegularExample",
+          "name": "Example of a Non-regular Language (0^n 1^n)"
+        },
+        {
+          "keyword": "#PumpingLemmaRL",
+          "name": "Pumping Lemma for Regular Languages"
+        },
+        {
+          "keyword": "#PumpingLemmaRLProof",
+          "name": "Pumping Lemma for Regular Languages: Proof"
+        },
+        {
+          "keyword": "#PumpingLemmaUsage",
+          "name": "How to Use the Pumping Lemma (Adversary Game)"
+        },
+        {
+          "keyword": "#PumpingLemmaExamples",
+          "name": "Pumping Lemma Examples (equal 0s and 1s, 0^n 1 0^n, perfect squares)"
+        },
+        {
+          "keyword": "#ClosureRL",
+          "name": "Closure Properties of Regular Languages"
+        },
+        {
+          "keyword": "#ClosureUnion",
+          "name": "RLs Closed under Union"
+        },
+        {
+          "keyword": "#ClosureComplement",
+          "name": "RLs Closed under Complementation"
+        },
+        {
+          "keyword": "#ClosureIntersection",
+          "name": "RLs Closed under Intersection (Product Construction)"
+        },
+        {
+          "keyword": "#ClosureDifference",
+          "name": "RLs Closed under Set Difference"
+        },
+        {
+          "keyword": "#ClosureReversal",
+          "name": "RLs Closed under Reversal"
+        },
+        {
+          "keyword": "#Homomorphism",
+          "name": "Homomorphisms"
+        },
+        {
+          "keyword": "#InverseHomomorphism",
+          "name": "Inverse Homomorphism"
+        },
+        {
+          "keyword": "#DecisionPropertiesRL",
+          "name": "Decision Properties of Regular Languages"
+        },
+        {
+          "keyword": "#MembershipTest",
+          "name": "Membership Question"
+        },
+        {
+          "keyword": "#EmptinessTest",
+          "name": "Emptiness Test"
+        },
+        {
+          "keyword": "#FinitenessTest",
+          "name": "Finiteness Test"
+        },
+        {
+          "keyword": "#DFAEquivalence",
+          "name": "Equivalence & Minimization of DFAs"
+        },
+        {
+          "keyword": "#EquivalentStates",
+          "name": "Equivalent States in a DFA"
+        },
+        {
+          "keyword": "#TableFilling",
+          "name": "Table Filling Algorithm"
+        },
+        {
+          "keyword": "#DFAMinimization",
+          "name": "How to Minimize a DFA"
+        },
+        {
+          "keyword": "#TwoDFAEquivalent",
+          "name": "Are Two DFAs Equivalent?"
+        }
+      ]
+    },
+    {
+      "lecture": 5,
+      "title": "Context-Free Languages & Grammars (CFLs & CFGs)",
+      "topics": [
+        {
+          "keyword": "#CFL",
+          "name": "Context-Free Languages"
+        },
+        {
+          "keyword": "#PalindromeCFG",
+          "name": "Example: Language of Palindromes"
+        },
+        {
+          "keyword": "#CFGDefinition",
+          "name": "Context-Free Grammar: Definition"
+        },
+        {
+          "keyword": "#CFGExamples",
+          "name": "CFG Examples (balanced parentheses, 0^m 1^n, if-then-else)"
+        },
+        {
+          "keyword": "#CFGApplications",
+          "name": "Applications of CFLs & CFGs (Compilers, Parsers, Markup Languages)"
+        },
+        {
+          "keyword": "#TagMarkup",
+          "name": "Tag-Markup Languages (HTML, XML)"
+        },
+        {
+          "keyword": "#ProductionStructure",
+          "name": "Structure of a Production"
+        },
+        {
+          "keyword": "#CFGConventions",
+          "name": "CFG Conventions"
+        },
+        {
+          "keyword": "#SyntacticExpressions",
+          "name": "Syntactic Expressions in Programming Languages"
+        },
+        {
+          "keyword": "#StringMembership",
+          "name": "String Membership (Derivation & Recursive Inference)"
+        },
+        {
+          "keyword": "#SimpleExpressionsCFG",
+          "name": "Simple Expressions Grammar"
+        },
+        {
+          "keyword": "#DerivationGeneralization",
+          "name": "Generalization of Derivation"
+        },
+        {
+          "keyword": "#LanguageOfCFG",
+          "name": "Language of a CFG"
+        },
+        {
+          "keyword": "#LeftmostRightmost",
+          "name": "Left-most & Right-most Derivations"
+        },
+        {
+          "keyword": "#CFGCorrectness",
+          "name": "Proving CFGs Correct (Induction)"
+        },
+        {
+          "keyword": "#ParseTrees",
+          "name": "Parse Trees"
+        },
+        {
+          "keyword": "#CFGRepresentations",
+          "name": "Interchangeability of CFG Representations"
+        },
+        {
+          "keyword": "#RightLinearCFG",
+          "name": "CFLs & Regular Languages (Right-linear Grammars)"
+        },
+        {
+          "keyword": "#Ambiguity",
+          "name": "Ambiguity in CFGs and CFLs"
+        },
+        {
+          "keyword": "#RemovingAmbiguity",
+          "name": "Removing Ambiguity (Operator Precedence)"
+        },
+        {
+          "keyword": "#InherentAmbiguity",
+          "name": "Inherently Ambiguous CFLs"
+        }
+      ]
+    },
+    {
+      "lecture": 6,
+      "title": "Pushdown Automata (PDA)",
+      "topics": [
+        {
+          "keyword": "#PDA",
+          "name": "PDA - the Automata for CFLs"
+        },
+        {
+          "keyword": "#PDADefinition",
+          "name": "Pushdown Automata - Definition"
+        },
+        {
+          "keyword": "#PDATransition",
+          "name": "δ: The Transition Function"
+        },
+        {
+          "keyword": "#PDAExampleWWR",
+          "name": "Example: PDA for L_wwr"
+        },
+        {
+          "keyword": "#PDATransitionDiagram",
+          "name": "PDA as a State Diagram"
+        },
+        {
+          "keyword": "#PDABalancedParens",
+          "name": "PDA for Balanced Parentheses"
+        },
+        {
+          "keyword": "#PDAID",
+          "name": "PDA's Instantaneous Description (ID)"
+        },
+        {
+          "keyword": "#PDASimulation",
+          "name": "PDA Computation on an Input (1111)"
+        },
+        {
+          "keyword": "#PDAAcceptance",
+          "name": "Acceptance by Final State vs. Empty Stack"
+        },
+        {
+          "keyword": "#PDAAcceptanceEquivalence",
+          "name": "Equivalence of PDAs Accepting by Final State and Empty Stack"
+        },
+        {
+          "keyword": "#PNtoPF",
+          "name": "PN to PF Construction (Empty Stack to Final State)"
+        },
+        {
+          "keyword": "#PFtoPN",
+          "name": "PF to PN Construction (Final State to Empty Stack)"
+        },
+        {
+          "keyword": "#CFGtoPDA",
+          "name": "Converting a CFG into a PDA"
+        },
+        {
+          "keyword": "#PDAtoCFG",
+          "name": "Converting a PDA into a CFG"
+        },
+        {
+          "keyword": "#CFGPDAWays",
+          "name": "Two Ways to Build a CFG / PDA"
+        },
+        {
+          "keyword": "#DPDA",
+          "name": "Deterministic PDAs (D-PDA)"
+        },
+        {
+          "keyword": "#PDAvsDPDA",
+          "name": "PDA vs DPDA vs Regular Languages"
+        }
+      ]
+    },
+    {
+      "lecture": 7,
+      "title": "Properties of Context-Free Languages",
+      "topics": [
+        {
+          "keyword": "#SimplifyCFG",
+          "name": "Simplifying CFGs"
+        },
+        {
+          "keyword": "#UselessSymbols",
+          "name": "Eliminating Useless Symbols (Generating & Reachable)"
+        },
+        {
+          "keyword": "#EpsilonProductions",
+          "name": "Eliminating ε-Productions (Nullable Variables)"
+        },
+        {
+          "keyword": "#UnitProductions",
+          "name": "Eliminating Unit Productions (Unit Pair Algorithm)"
+        },
+        {
+          "keyword": "#CFGCleanupOrder",
+          "name": "Order of CFG Simplification Steps"
+        },
+        {
+          "keyword": "#NormalForms",
+          "name": "Normal Forms"
+        },
+        {
+          "keyword": "#CNF",
+          "name": "Chomsky Normal Form (CNF)"
+        },
+        {
+          "keyword": "#CNFConversion",
+          "name": "Converting a CFG into CNF"
+        },
+        {
+          "keyword": "#GNF",
+          "name": "Greibach Normal Form (GNF)"
+        },
+        {
+          "keyword": "#ParseTreeTheorem",
+          "name": "The Parse Tree Theorem"
+        },
+        {
+          "keyword": "#PumpingLemmaCFL",
+          "name": "Pumping Lemma for CFLs"
+        },
+        {
+          "keyword": "#PumpingLemmaCFLProof",
+          "name": "Pumping Lemma for CFLs: Proof"
+        },
+        {
+          "keyword": "#PumpingLemmaCFLExamples",
+          "name": "Pumping Lemma for CFLs Applications (a^m b^m c^m, ww, k^2, i<j<k)"
+        },
+        {
+          "keyword": "#ClosureCFL",
+          "name": "CFL Closure Properties"
+        },
+        {
+          "keyword": "#Substitution",
+          "name": "Substitution Operation"
+        },
+        {
+          "keyword": "#ClosureSubstitution",
+          "name": "CFLs Closed under Substitution"
+        },
+        {
+          "keyword": "#CFLClosureUnion",
+          "name": "CFLs Closed under Union"
+        },
+        {
+          "keyword": "#CFLClosureConcatenation",
+          "name": "CFLs Closed under Concatenation"
+        },
+        {
+          "keyword": "#CFLClosureKleene",
+          "name": "CFLs Closed under Kleene Closure"
+        },
+        {
+          "keyword": "#CFLClosureReversal",
+          "name": "CFLs Closed under Reversal"
+        },
+        {
+          "keyword": "#CFLNotIntersection",
+          "name": "CFLs Not Closed under Intersection"
+        },
+        {
+          "keyword": "#CFLNotComplement",
+          "name": "CFLs Not Closed under Complementation"
+        },
+        {
+          "keyword": "#CFLNotDifference",
+          "name": "CFLs Not Closed under Difference"
+        },
+        {
+          "keyword": "#DecisionPropertiesCFL",
+          "name": "Decision Properties of CFLs"
+        },
+        {
+          "keyword": "#UndecidableCFL",
+          "name": "Undecidable Problems for CFLs"
+        }
+      ]
+    },
+    {
+      "lecture": 8,
+      "title": "Turing Machines",
+      "topics": [
+        {
+          "keyword": "#TuringMachine",
+          "name": "Turing Machines (Introduction & Motivation)"
+        },
+        {
+          "keyword": "#TMDefinition",
+          "name": "A Turing Machine (TM) - Formal Definition"
+        },
+        {
+          "keyword": "#TMTransition",
+          "name": "TM Transition Function"
+        },
+        {
+          "keyword": "#TMID",
+          "name": "ID of a TM"
+        },
+        {
+          "keyword": "#TMMembership",
+          "name": "Way to Check for Membership (Acceptance by Halting)"
+        },
+        {
+          "keyword": "#TM0n1n",
+          "name": "TM for {0^n 1^n | n>=1}"
+        },
+        {
+          "keyword": "#TMCalculations",
+          "name": "TMs for Calculations"
+        },
+        {
+          "keyword": "#TMMonus",
+          "name": "TM for Monus Subtraction"
+        },
+        {
+          "keyword": "#TMMultiplication",
+          "name": "TM for Multiplication"
+        },
+        {
+          "keyword": "#CalculationsVsLanguages",
+          "name": "Calculations vs. Languages"
+        },
+        {
+          "keyword": "#RELanguages",
+          "name": "Language of the Turing Machines (Recursively Enumerable)"
+        },
+        {
+          "keyword": "#TMStorage",
+          "name": "TMs with Storage"
+        },
+        {
+          "keyword": "#MultiTrackTM",
+          "name": "Multi-track Turing Machines"
+        },
+        {
+          "keyword": "#MultiTapeTM",
+          "name": "Multi-tape Turing Machines"
+        },
+        {
+          "keyword": "#NondeterministicTM",
+          "name": "Non-deterministic TMs"
+        },
+        {
+          "keyword": "#TMEquivalence",
+          "name": "Equivalence of TM Variations"
+        }
+      ]
+    },
+    {
+      "lecture": 9,
+      "title": "Undecidability & Complexity (not covered in slides)",
+      "topics": [
+        {
+          "keyword": "#HaltingProblem",
+          "name": "Halting Problem"
+        },
+        {
+          "keyword": "#Undecidability",
+          "name": "Undecidability"
+        },
+        {
+          "keyword": "#PCP",
+          "name": "Post's Correspondence Problem"
+        },
+        {
+          "keyword": "#NPHardNPComplete",
+          "name": "NP-Hard & NP-Complete"
+        },
+        {
+          "keyword": "#Reduction",
+          "name": "Reduction"
+        },
+        {
+          "keyword": "#SAT",
+          "name": "Satisfiability (SAT, Clique, Circuit-SAT)"
+        },
+        {
+          "keyword": "#TractableIntractable",
+          "name": "Tractable vs Intractable Problems"
+        },
+        {
+          "keyword": "#RecursiveVsRE",
+          "name": "Recursive vs Recursively Enumerable Languages"
+        },
+        {
+          "keyword": "#UnrestrictedGrammar",
+          "name": "Unrestricted Grammar"
+        },
+        {
+          "keyword": "#TwoWayInfiniteTape",
+          "name": "TM with Two-way Infinite Tape"
+        }
+      ]
+    }
+  ]
+}

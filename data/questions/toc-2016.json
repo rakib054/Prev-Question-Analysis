@@ -1,0 +1,509 @@
+{
+  "subject": "toc",
+  "exam": {
+    "id": "toc-2016",
+    "year": 2016,
+    "term": "3rd Year 1st Term",
+    "paper_code": "CSE 3101",
+    "duration_hours": 3,
+    "full_marks": 210,
+    "answer_rule": "Any three from each section"
+  },
+  "questions": [
+    {
+      "id": "toc-2016-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 7,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power of alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Design a Deterministic Finite Automata (DFA) that accepts the language L such that $L=\\{w \\mid w \\text{ starts with 0 and has odd length or starts with 1 and has even length}\\}$. How will you test the membership of a string using the above DFA?",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFAOperation"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "What is the basic difference between the extended transition functions of DFA and Nondeterministic Finite Automata (NFA)? Explain with an example.",
+      "figures": [],
+      "keywords": [
+        "#ExtendedTransition",
+        "#ExtendedTransitionNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q1d",
+      "section": "A",
+      "qno": 1,
+      "part": "d",
+      "marks": 5,
+      "co": null,
+      "text": "How can you verify whether a regular language is empty or not.",
+      "figures": [],
+      "keywords": [
+        "#EmptinessTest"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Write regular expression/definition for the following languages:\n\n- (i) All strings containing no more than two $a$'s over alphabet $\\{a, b, c\\}$.\n- (ii) The set of strings of $0$'s and $1$'s whose number of $1$'s is divisible by four and whose number of $0$'s is even.\n- (iii) All string of digits with at most one repeated digit.\n- (iv) All Strings which contain no run's of $a$'s of length greater than two over alphabet $\\{a, b, c\\}$.",
+      "figures": [],
+      "keywords": [
+        "#BuildingRegEx"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Design a NFA that accepts set of all strings of $a$'s and $b$'s such that there are two $a$'s separated by a number of positions that is divisible by 3. Also show the states NFA will be in during the processing of valid input.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign",
+        "#NFAOperation"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "Convert the following NFA to DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2016/2016-q2c-fig1.svg",
+          "alt": "NFA with states q0 (start), q1 (accepting, double circle) and q2. q0 has a self-loop labelled 0 and goes to q1 on 0, 1. q1 goes to q2 on 0, 1. q2 has a self-loop labelled 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 13,
+      "co": null,
+      "text": "Define $\\varepsilon$-NFA. Consider the following $\\varepsilon$-NFA\n\nCompute $\\varepsilon$-closure of each state and find it's equivalent DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2016/2016-q3a-fig1.svg",
+          "alt": "Epsilon-NFA with states p (start), q and r (accepting, double circle). p has a self-loop a and goes to q on ε. q has a self-loop b and goes to r on ε. r has a self-loop c."
+        }
+      ],
+      "keywords": [
+        "#EpsilonNFA",
+        "#ECLOSE",
+        "#EliminateEpsilon"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "Construct an $\\varepsilon$-NFA equivalent to $(0+1)^*(0+11)$.",
+      "figures": [],
+      "keywords": [
+        "#RegExToEpsilonNFA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q3c",
+      "section": "A",
+      "qno": 3,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Prove that if $L=L(A)$ for some DFA A, then there is a regular expression R such that $L=L(R)$.",
+      "figures": [],
+      "keywords": [
+        "#FAandRegEx",
+        "#DFAtoRegEx"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q4a",
+      "section": "B",
+      "qno": 4,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Consider the following grammar:\n\n$$\\begin{aligned}\nS &\\to AB \\mid AS \\\\\nA &\\to aA \\mid \\varepsilon \\\\\nB &\\to BB \\mid AB \\mid bb\n\\end{aligned}$$\n\nAnswer these questions\n\n- (i) What's shortest string it accepts? Are there more than one that length?\n- (ii) What language does it generate?\n- (iii) Show this grammar is ambiguous.",
+      "figures": [],
+      "keywords": [
+        "#LanguageOfCFG",
+        "#Ambiguity"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q4b",
+      "section": "B",
+      "qno": 4,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Give a context Free Grammar (CFG) for the language of balanced parenthesis and squared brackets. How would you interpret the string \"([[()[]]([])]())\"?",
+      "figures": [],
+      "keywords": [
+        "#CFGExamples",
+        "#StringMembership"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "The bracket string at the end of the question is hard to read on the scan (the '()' pairs look like 'OO'). Transcribed as the balanced string ([[()[]]([])]()); verify against the paper. A stray quotation mark sits next to the mark '(12)'."
+    },
+    {
+      "id": "toc-2016-q4c",
+      "section": "B",
+      "qno": 4,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "Define CFG. Construct a CFG for the given expression: $(a+b)(a+b+0+1)^*$",
+      "figures": [],
+      "keywords": [
+        "#CFGDefinition",
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 7,
+      "co": null,
+      "text": "What is push down automata (PDA)? How does it differ from $\\varepsilon$-NFA?",
+      "figures": [],
+      "keywords": [
+        "#PDA",
+        "#EpsilonNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q5b",
+      "section": "B",
+      "qno": 5,
+      "part": "b",
+      "marks": 11,
+      "co": null,
+      "text": "Construct deterministic PDA to accept the following language, $L=\\{0^n1^n \\mid n>0\\}$.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition",
+        "#DPDA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q5c",
+      "section": "B",
+      "qno": 5,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Prove the theorem, let L be $L(P_F)$ for some PDA $P_F$ where $P_F=(Q,\\Sigma,\\Gamma,\\delta_F,q_0,z_0,F)$ then there is a PDA $P_N$ such that $L = N(P_N)$.",
+      "figures": [],
+      "keywords": [
+        "#PFtoPN",
+        "#PDAAcceptanceEquivalence"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q5d",
+      "section": "B",
+      "qno": 5,
+      "part": "d",
+      "marks": 5,
+      "co": null,
+      "text": "Why is it that the transition function for DPDA's only works for 1 alphabet symbol and 1 stack symbol?",
+      "figures": [],
+      "keywords": [
+        "#DPDA",
+        "#PDATransition"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q6a",
+      "section": "B",
+      "qno": 6,
+      "part": "a",
+      "marks": 25,
+      "co": null,
+      "text": "Consider the following grammar\n\n$$\\begin{aligned}\nS &\\to AACD \\\\\nA &\\to aAb \\mid \\varepsilon \\\\\nC &\\to aC \\mid a \\\\\nD &\\to aDa \\mid bDb \\mid \\varepsilon\n\\end{aligned}$$\n\nAnd simply safe order\n\n- (i) Eliminate $\\varepsilon$-production.\n- (ii) Eliminate unit production.\n- (iii) Eliminate Useless symbols\n- (iv) Put the grammar in CNF",
+      "figures": [],
+      "keywords": [
+        "#EpsilonProductions",
+        "#UnitProductions",
+        "#UselessSymbols",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q6b",
+      "section": "B",
+      "qno": 6,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "Discuss about PDA acceptance (i) From empty stack to final state and (ii) From final state to empty stack.",
+      "figures": [],
+      "keywords": [
+        "#PNtoPF",
+        "#PFtoPN"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q7a",
+      "section": "B",
+      "qno": 7,
+      "part": "a",
+      "marks": 6,
+      "co": null,
+      "text": "State pumping lemma for CFL's and its advantages",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q7b",
+      "section": "B",
+      "qno": 7,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Use pumping lemma to show the following (i) $a^nb^mc^p$ is context free for $n \\ge 0$, $m \\ge 0$ and $p=n$. (ii) $a^nb^mc^p$ is not context free for $n \\ge 0$, $m=2n$ and $p=m+n$.",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL",
+        "#PumpingLemmaCFLExamples"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q7c",
+      "section": "B",
+      "qno": 7,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "Convert the following grammar to a PDA that accepts the same language by empty stack.\n\n$$\\begin{aligned}\nS &\\to 0S1 \\mid A \\\\\nS &\\to 1A0 \\mid S \\mid \\varepsilon\n\\end{aligned}$$",
+      "figures": [],
+      "keywords": [
+        "#CFGtoPDA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "Printed as 'S→OSI | A' and 'S→IAO | S | ε' (letters O/I look like digits 0/1). Transcribed with digits 0 and 1, and the second line's head kept as printed (S), though it is probably A as in the same grammar in 2015 Q6c."
+    },
+    {
+      "id": "toc-2016-q7d",
+      "section": "B",
+      "qno": 7,
+      "part": "d",
+      "marks": 7,
+      "co": null,
+      "text": "Explain the halting problem of Turing Machine (TM).",
+      "figures": [],
+      "keywords": [
+        "#HaltingProblem"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q8a",
+      "section": "B",
+      "qno": 8,
+      "part": "a",
+      "marks": 5,
+      "co": null,
+      "text": "What is meant by a Turing Machine (TM) with two way infinite tape? Give example(s).",
+      "figures": [],
+      "keywords": [
+        "#TwoWayInfiniteTape"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q8b",
+      "section": "B",
+      "qno": 8,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Design a Turing Machine (TM) to implement the function \"multiplication\" using the subroutine copy. Simulate the action for the input 001000.",
+      "figures": [],
+      "keywords": [
+        "#TuringMachine",
+        "#TMTransition",
+        "#TMID",
+        "#TMMultiplication"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2016-q8c",
+      "section": "B",
+      "qno": 8,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "Let $\\Sigma=\\{a, b, c\\}$ and let $A=\\{a^ib^jc^k \\mid i,j,k \\ge 0 \\text{ and } i=j \\text{ or } i-k\\}$. Describe a push down automaton (PDA) that recognizes A.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "Printed as 'i = j or i − k' (a dash, probably '=' meant). Transcribed as printed."
+    },
+    {
+      "id": "toc-2016-q8d",
+      "section": "B",
+      "qno": 8,
+      "part": "d",
+      "marks": 6,
+      "co": null,
+      "text": "Write the differences between single and multi-tape TM.",
+      "figures": [],
+      "keywords": [
+        "#MultiTapeTM",
+        "#TMEquivalence"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    }
+  ]
+}

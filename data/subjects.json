@@ -1,0 +1,14 @@
+[
+  {
+    "id": "toc",
+    "name": "Theory of Computation",
+    "codes": [
+      "CSE 2209"
+    ],
+    "former_codes": [
+      "CSE 3101"
+    ],
+    "topics_file": "data/topics/toc.json",
+    "questions_file": "data/questions/toc.json"
+  }
+]

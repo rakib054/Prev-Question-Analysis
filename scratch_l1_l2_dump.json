@@ -1,0 +1,1534 @@
+[
+  {
+    "q": {
+      "id": "toc-2023-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 10,
+      "co": "CO1",
+      "text": "Describe finite automata. Explain the statement,\n\n\"$L$ is said to be a language over alphabet $\\Sigma$, only if $L \\subseteq \\Sigma^*$.\"",
+      "figures": [],
+      "keywords": [
+        "#FiniteAutomaton",
+        "#Languages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 10,
+      "co": "CO3",
+      "text": "Build a DFA for the following language by describing the steps and transition table–\n\n$L = \\{w \\mid w \\text{ is a string that has even number of \"b\"s and third symbol from the right hand side is \"a\"}\\}$",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 15,
+      "co": "CO2",
+      "text": "Analyze the following terms:\n\n- i) The membership problem,\n- ii) Grammar,\n- iii) Kleene theorem.",
+      "figures": [],
+      "keywords": [
+        "#MembershipProblem",
+        "#LanguagesGrammars",
+        "#FAandRegEx"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      1,
+      3
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 13,
+      "co": "CO3",
+      "text": "What does NFA do on reading an input string? Construct an NFA for the given regular expression $1^*00^*1(0+1)^*$.",
+      "figures": [],
+      "keywords": [
+        "#NFAOperation",
+        "#RegExToEpsilonNFA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2,
+      3
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 12,
+      "co": "CO4",
+      "text": "Design $\\epsilon$-NFA for $L = \\{w \\mid w \\text{ is empty, or if non-empty will end with } 010\\text{, or if non-empty will end with } 101\\}$ and convert it to DFA.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonNFA",
+        "#EliminateEpsilon",
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 10,
+      "co": "CO4",
+      "text": "Prove \"For any NFA $N$, there is a DFA $D$ such that $L(D) = L(N)$.\"",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#SubsetCorrectness"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 7,
+      "co": "CO1",
+      "text": "What is an \"Error state\" in finite automata? Explain with example(s).",
+      "figures": [],
+      "keywords": [
+        "#ErrorState"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2023-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 18,
+      "co": "CO4",
+      "text": "Explain all the NFA to DFA construction processes and determine the best process among them for the given example–\n\n$L = \\{w \\mid w \\text{ starts with } 11 \\text{ and ends in } 001\\}$",
+      "figures": [],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation",
+        "#DFANFAEquivalence"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2023"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Define the terms with example(s): (i) Alphabet, (ii) Power of alphabet, and (iii) Language.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#AlphabetPowers",
+        "#Languages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Construct the equivalent DFA for the following NFA.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q1b-fig1.svg",
+          "alt": "NFA with states 1, 2, 3. A start arrow enters state 1, which is accepting (double circle); 2 and 3 are not accepting. Transitions: 1 to 2 on b; 1 to 3 on epsilon; 3 to 1 on a; 2 has a self-loop on a; 2 to 3 on a, b."
+        }
+      ],
+      "keywords": [
+        "#EliminateEpsilon",
+        "#SubsetConstruction",
+        "#ECLOSE"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Proof that for any NFA, there is a DFA $D$ such that $L(N) = L(D)$.",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#SubsetCorrectness"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "\"If $N$ is an NFA that recognizes language $L$, then swapping the final and non-final states in $M$ does not necessarily yield a new NFA that recognizes $L$\"—justify this statement.",
+      "figures": [],
+      "keywords": [
+        "#ClosureComplement",
+        "#DFAvsNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "Transcribed as printed. The last 'L' before the closing quote shows no visible complement bar (it probably should be the complement of L), and the statement says 'M' where the NFA is called N. Please confirm against the original.",
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2,
+      4
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 5,
+      "co": null,
+      "text": "Write the significances of using extended transition function.",
+      "figures": [],
+      "keywords": [
+        "#ExtendedTransition"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Let $\\Sigma_m = \\{a_1, \\cdots, a_m\\}$ be an alphabet containing $m$ elements for some integer $m \\ge 1$. Let $L_m$ be the following language:\n\n\"Accepts all strings which at least one $a_i$ occurs an even number of times (not necessarily consecutively), where $1 \\le i \\le m$.\" The following figure shows an NFA for the language $L_2$. Construct an NFA for the language $L_3$ that has at most 7 states.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q3b-fig1.svg",
+          "alt": "NFA for L_2 with states 1 to 5. A start arrow enters state 1. States 2 and 3 are accepting (double circles). Transitions: 1 to 2 on epsilon; 1 to 3 on epsilon; 2 self-loop on a2; 2 to 4 on a1; 4 to 2 on a1; 4 self-loop on a2; 3 self-loop on a1; 3 to 5 on a2; 5 to 3 on a2; 5 self-loop on a1."
+        }
+      ],
+      "keywords": [
+        "#NFADesign",
+        "#EpsilonNFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2022-q4a",
+      "section": "A",
+      "qno": 4,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Consider the following machine N.\n\nConstruct the tree for input 1001101.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q4a-fig1.svg",
+          "alt": "Machine N: NFA with epsilon transitions, states q1, q2, q3, q4. A start arrow enters q1. q4 is accepting (double circle). Transitions: q1 self-loop on 0,1; q1 to q2 on 0; q2 to q3 on 1 and on epsilon; q3 to q4 on 1; q4 self-loop on 0,1."
+        }
+      ],
+      "keywords": [
+        "#EpsilonNFASimulation",
+        "#NFAOperation"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "The marks '(08' are partly hidden by a black stroke at the page edge (closing bracket not visible). Read as 8; this makes Q4 sum to 35 like every other question.",
+      "exam_id": "toc-2022"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2021-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b\\}$ and let $L = \\{w \\in \\Sigma^* \\mid w \\ne \\epsilon \\text{ and the first and last character of } w \\text{ are the same}\\}$. Design a DFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2021"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2021-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b, c\\}$ and let $L = \\{w \\in \\Sigma^* \\mid \\text{some character in } \\Sigma \\text{ appears at most twice in } w\\}$. Design an NFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2021"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2021-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b\\}$ and let $L = \\{w \\in \\Sigma^* \\mid w \\text{ is a non-empty string whose characters alternate between } a\\text{'s and } b\\text{'s}\\}$. Design a DFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2021"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2021-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "Find ECLOSE of each state of the following NFA.",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q2c-fig1.svg",
+          "alt": "Epsilon-NFA with states 0 to 7. A start arrow enters state 0. State 7 is accepting (double circle). Transitions: 0 to 1 on epsilon; 0 to 7 on epsilon (long arc below the diagram); 1 to 2 on epsilon; 1 to 5 on epsilon; 2 to 3 on a; 5 to 6 on b; 3 to 4 on epsilon; 6 to 4 on epsilon; 4 to 1 on epsilon (arc above the diagram); 4 to 7 on epsilon."
+        }
+      ],
+      "keywords": [
+        "#ECLOSE",
+        "#EpsilonNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2021"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2021-q4a",
+      "section": "A",
+      "qno": 4,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Convert the following NFA to DFA. [Use any method you want]",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q4a-fig1.svg",
+          "alt": "NFA with states q0, q1, q2. A start arrow enters q0. q2 is accepting (double circle). Transitions: q0 self-loop on 0; q0 to q1 on 1; q0 to q2 on 1; q1 self-loop on 0; q1 to q2 on 0, 1; q2 to q0 on 0; q2 to q1 on 0, 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2021"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2020-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power on alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2020"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2020-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Design a Deterministic Finite Automata (DFA) for the set of string over $\\{a, b\\}$ such that the length of the string $|\\omega| = 2$ i.e., length of the string is exactly 2.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2020"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2020-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Convert the following NFA to DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2020/2020-q2b-fig1.svg",
+          "alt": "NFA with states q0, q1, q2, labelled 'Start' at the entry arrow into q0. q1 is accepting (double circle). Transitions: q0 self-loop on 0; q0 to q1 on 0,1; q1 to q2 on 0,1; q2 self-loop on 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2020"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2020-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 7,
+      "co": null,
+      "text": "Sketch a brief argument for why any regular language can be recognized by an NFA.",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#DFAvsNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2020"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2020-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Design a NFA that accepts set of all strings of $a$'s and $b$'s such that there are two $a$'s separated by a number of positions that is divisible by 3. Also validate the NFA of valid input.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2020"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 7,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language and power of alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 9,
+      "co": null,
+      "text": "Define the terms with example(s) : (i) Alphabet, (ii) Power of alphabet and (iii) Language.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#AlphabetPowers",
+        "#Languages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "How does NFA differ from DFA? Write the significances of using extended transition function.",
+      "figures": [],
+      "keywords": [
+        "#DFAvsNFA",
+        "#ExtendedTransition"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q1d",
+      "section": "A",
+      "qno": 1,
+      "part": "d",
+      "marks": 8,
+      "co": null,
+      "text": "Design $\\epsilon$-NFA for accepting decimal numbers.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonNFA",
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 11,
+      "co": null,
+      "text": "Prove that, for any NFA $N$ there is a DFA $D$, such that $L(D) = L(N)$, and vice versa.",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#SubsetCorrectness"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Find the equivalent DFA for the following NFA:",
+      "figures": [
+        {
+          "src": "images/toc/2019/2019-q2b-fig1.svg",
+          "alt": "NFA with states 1, 2, 3, labelled 'start' at the entry arrow into state 1. State 3 is accepting (double circle). Transitions: 1 self-loop on 0, 1; 1 to 2 on 0; 2 to 3 on 1; 3 self-loop on 0, 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Design a NFA that accepts the language $L = \\{w \\in \\{a, b\\} : w \\text{ contains the substring } aa\\}$.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2019-q3d",
+      "section": "A",
+      "qno": 3,
+      "part": "d",
+      "marks": 7,
+      "co": null,
+      "text": "Define ECLOSE. Write inductive definition of ECLOSE. Give example.",
+      "figures": [],
+      "keywords": [
+        "#ECLOSE"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2019"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 6,
+      "co": null,
+      "text": "What is Finite Automata (FA)? Write down its applications.",
+      "figures": [],
+      "keywords": [
+        "#FiniteAutomaton",
+        "#FiniteAutomataIntro"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      1,
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 9,
+      "co": null,
+      "text": "Define the terms with example(s):\n\n- (i) Alphabet\n- (ii) Power of alphabet and\n- (iii) Language.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#AlphabetPowers",
+        "#Languages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 9,
+      "co": null,
+      "text": "Differentiate between DFA and NFA. What is the significance of using extended transition function?",
+      "figures": [],
+      "keywords": [
+        "#DFAvsNFA",
+        "#ExtendedTransition"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q1d",
+      "section": "A",
+      "qno": 1,
+      "part": "d",
+      "marks": 11,
+      "co": null,
+      "text": "Give an NFA to recognize the following language over the alphabet $\\{a, b\\}^*$ :\n\n$A = \\{ \\omega \\mid \\omega \\text{ has at least two non-consecutive b's } \\}$.\n\ne.g. $bbb \\notin A$, $bbaa \\notin A$, $babaab \\in A$.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 10,
+      "co": null,
+      "text": "Find the equivalent DFA for the following NFA:",
+      "figures": [
+        {
+          "src": "images/toc/2018/2018-q2a-fig1.svg",
+          "alt": "NFA with states q0 (start, arrow labelled Start), q1 and q2 (accepting, double circle). q0 has a self-loop labelled 1, 0. q0 goes to q1 on 1. q1 goes to q2 on 0."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Design $\\varepsilon$-NFA, NFA and DFA for accepting decimal numbers.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonNFA",
+        "#NFADesign",
+        "#DFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Define ECLOSE. Write inductive definition of ECLOSE. Find ECLOSE of each state of the following FA.",
+      "figures": [
+        {
+          "src": "images/toc/2018/2018-q3b-fig1.svg",
+          "alt": "Epsilon-NFA with states 1-10, start at 1, no accepting states drawn. Transitions: 1-ε->2, 1-ε->6, 2-ε->3, 3-ε->4, 4-ε->5, 6-a->7, 7-b->4, 7-ε->8, 8-c->5, 8-ε->9, 9-ε->10."
+        }
+      ],
+      "keywords": [
+        "#ECLOSE"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2018-q5d",
+      "section": "B",
+      "qno": 5,
+      "part": "d",
+      "marks": 6,
+      "co": null,
+      "text": "How does PDA differ from $\\varepsilon$-NFA?",
+      "figures": [],
+      "keywords": [
+        "#PDA",
+        "#EpsilonNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2018"
+    },
+    "lectures": [
+      2,
+      6
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 10,
+      "co": null,
+      "text": "What is computation? Prove $1+4+7+\\cdots+(3n-2)=\\frac{n(3n-1)}{2}$ for $n>0$ using principle of mathematical induction.",
+      "figures": [],
+      "keywords": [
+        "#ProofTechniques",
+        "#AutomataTheory"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "What is Deterministic Finite Automata (DFA)? Give the DFA accepting the languages over the alphabet $\\{0,1\\}$ that have the set of all strings whose $10^{th}$ symbol from the right end is 1.",
+      "figures": [],
+      "keywords": [
+        "#DFA",
+        "#DFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 7,
+      "co": null,
+      "text": "If $L$ is accepted by a Nondeterministic Finite Automata (NFA) with $\\varepsilon$-transition then show that $L$ is accepted by an NFA without $\\varepsilon$-transition.",
+      "figures": [],
+      "keywords": [
+        "#EquivalenceDFANFAEpsilon",
+        "#EliminateEpsilon"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q1d",
+      "section": "A",
+      "qno": 1,
+      "part": "d",
+      "marks": 5,
+      "co": null,
+      "text": "How will you test the membership of a string in NFA? Explain with an example.",
+      "figures": [],
+      "keywords": [
+        "#NFAOperation"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Design a NFA that accepts the language $L=\\{w\\in\\{a,b\\}: w \\text{ contains the substring } aa\\}$. Also show the states NFA will be in during the processing of valid input.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign",
+        "#NFAOperation"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 11,
+      "co": null,
+      "text": "Convert the following NFA to its equivalent DFA.\n\n| | 0 | 1 |\n|---|---|---|\n| p | {p, q} | {p} |\n| q | {r} | {r} |\n| r | {s} | φ |\n| *s | {s} | {s} |",
+      "figures": [],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2017-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Define $\\varepsilon$-closure. Compute $\\varepsilon$-closure of each state and find its equivalent DFA.\n\n| | ε | a | b | c |\n|---|---|---|---|---|\n| →p | {q} | {p} | φ | φ |\n| q | {r} | φ | {q} | φ |\n| *r | φ | φ | φ | {r} |",
+      "figures": [],
+      "keywords": [
+        "#ECLOSE",
+        "#EliminateEpsilon"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2017"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 7,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power of alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Design a Deterministic Finite Automata (DFA) that accepts the language L such that $L=\\{w \\mid w \\text{ starts with 0 and has odd length or starts with 1 and has even length}\\}$. How will you test the membership of a string using the above DFA?",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFAOperation"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "What is the basic difference between the extended transition functions of DFA and Nondeterministic Finite Automata (NFA)? Explain with an example.",
+      "figures": [],
+      "keywords": [
+        "#ExtendedTransition",
+        "#ExtendedTransitionNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Design a NFA that accepts set of all strings of $a$'s and $b$'s such that there are two $a$'s separated by a number of positions that is divisible by 3. Also show the states NFA will be in during the processing of valid input.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign",
+        "#NFAOperation"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "Convert the following NFA to DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2016/2016-q2c-fig1.svg",
+          "alt": "NFA with states q0 (start), q1 (accepting, double circle) and q2. q0 has a self-loop labelled 0 and goes to q1 on 0, 1. q1 goes to q2 on 0, 1. q2 has a self-loop labelled 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 13,
+      "co": null,
+      "text": "Define $\\varepsilon$-NFA. Consider the following $\\varepsilon$-NFA\n\nCompute $\\varepsilon$-closure of each state and find it's equivalent DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2016/2016-q3a-fig1.svg",
+          "alt": "Epsilon-NFA with states p (start), q and r (accepting, double circle). p has a self-loop a and goes to q on ε. q has a self-loop b and goes to r on ε. r has a self-loop c."
+        }
+      ],
+      "keywords": [
+        "#EpsilonNFA",
+        "#ECLOSE",
+        "#EliminateEpsilon"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2016-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 7,
+      "co": null,
+      "text": "What is push down automata (PDA)? How does it differ from $\\varepsilon$-NFA?",
+      "figures": [],
+      "keywords": [
+        "#PDA",
+        "#EpsilonNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2016"
+    },
+    "lectures": [
+      2,
+      6
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power on alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      1
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Give the formal definition of Deterministic Finite Automata (DFA). Design a DFA that accepts the following language L over the alphabet $\\{0,1\\}$.\n\n$L=\\{ w \\mid w \\text{ has contains the symbol 1 at most three times}\\}$\n\nAlso give the transition diagram of that DFA.",
+      "figures": [],
+      "keywords": [
+        "#DFA",
+        "#DFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Write down the properties of Nondeterministic Finite Automata (NFA). How can you test the membership of a string? Use example.",
+      "figures": [],
+      "keywords": [
+        "#NFA",
+        "#NFAOperation"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Define $\\epsilon$-NFA. Draw an $\\epsilon$-NFA that searches KUET and STUDENT from a test document.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonNFA",
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Convert the following NFA into DFA using subset construction method.",
+      "figures": [
+        {
+          "src": "images/toc/2015/2015-q2b-fig1.svg",
+          "alt": "Fig. 2(b): NFA with states 0 (start), 1 and 2 (accepting, double circle). State 0 has a self-loop labelled a,b and goes to 1 on b. State 1 goes to 2 on b. State 2 has a self-loop labelled a,b."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      2
+    ]
+  },
+  {
+    "q": {
+      "id": "toc-2015-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 13,
+      "co": null,
+      "text": "Convert regular expression $(a+b)b^*(a+b)^*$ to an $\\epsilon$-NFA. Show the steps. Also Describe the extended transition function $\\hat{\\delta}$ for $\\epsilon$-NFA with suitable example.",
+      "figures": [],
+      "keywords": [
+        "#RegExToEpsilonNFA",
+        "#ExtendedTransitionNFA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null,
+      "exam_id": "toc-2015"
+    },
+    "lectures": [
+      2,
+      3
+    ]
+  }
+]

@@ -1,0 +1,486 @@
+{
+  "subject": "toc",
+  "exam": {
+    "id": "toc-2021",
+    "year": 2021,
+    "term": "3rd Year 1st Term",
+    "paper_code": "CSE 3101",
+    "duration_hours": 3,
+    "full_marks": 210,
+    "answer_rule": "Any three from each section"
+  },
+  "questions": [
+    {
+      "id": "toc-2021-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b\\}$ and let $L = \\{w \\in \\Sigma^* \\mid w \\ne \\epsilon \\text{ and the first and last character of } w \\text{ are the same}\\}$. Design a DFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b, c\\}$ and let $L = \\{w \\in \\Sigma^* \\mid \\text{some character in } \\Sigma \\text{ appears at most twice in } w\\}$. Design an NFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 9,
+      "co": null,
+      "text": "Let $\\Sigma = \\{a, b\\}$ and let $L = \\{w \\in \\Sigma^* \\mid w \\text{ is a non-empty string whose characters alternate between } a\\text{'s and } b\\text{'s}\\}$. Design a DFA for $L$.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q1d",
+      "section": "A",
+      "qno": 1,
+      "part": "d",
+      "marks": 8,
+      "co": null,
+      "text": "How can you verify that a regular language is empty?",
+      "figures": [],
+      "keywords": [
+        "#EmptinessTest",
+        "#DecisionPropertiesRL"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 10,
+      "co": null,
+      "text": "Find regular expression for the following DFA having alphabet $\\{a, b\\}$. [Use Ardens method]",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q2a-fig1.svg",
+          "alt": "DFA with four states A, B, C, D, drawn left to right. A start arrow enters A. A, B and C are accepting (double circles); D is not accepting. A has a self-loop on b. A goes to B on a. B has a self-loop on a. B goes to C on b. C has a self-loop on b. C goes to D on a. D has a self-loop on a, b."
+        }
+      ],
+      "keywords": [
+        "#DFAtoRegEx"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 5,
+      "co": null,
+      "text": "Design a $\\epsilon$-NFA for the regular expression $a(a + b)^*ab$.",
+      "figures": [],
+      "keywords": [
+        "#RegExToEpsilonNFA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "Find ECLOSE of each state of the following NFA.",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q2c-fig1.svg",
+          "alt": "Epsilon-NFA with states 0 to 7. A start arrow enters state 0. State 7 is accepting (double circle). Transitions: 0 to 1 on epsilon; 0 to 7 on epsilon (long arc below the diagram); 1 to 2 on epsilon; 1 to 5 on epsilon; 2 to 3 on a; 5 to 6 on b; 3 to 4 on epsilon; 6 to 4 on epsilon; 4 to 1 on epsilon (arc above the diagram); 4 to 7 on epsilon."
+        }
+      ],
+      "keywords": [
+        "#ECLOSE",
+        "#EpsilonNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q2d",
+      "section": "A",
+      "qno": 2,
+      "part": "d",
+      "marks": 10,
+      "co": null,
+      "text": "Write a regular expression for the following languages.\n\n- i) The set of all strings of 0's and 1's such that no prefix has two more 0's than 1's, not two more 1's than 0's.\n- ii) The set of all strings of 0's and 1's whose number of 0's is divisible by 5 and number of 1's is even.",
+      "figures": [],
+      "keywords": [
+        "#BuildingRegEx"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Using Pumping lemma, show that the following languages are not regular.\n\n- i) $L = \\{0^n 1 0^n \\mid n \\ge 1\\}$\n- ii) $L = \\{0^i \\mid i \\text{ is a perfect square}\\}$",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaRL",
+        "#PumpingLemmaExamples",
+        "#ProvingNonRegular"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Use Table filling algorithm to minimize the following DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q3b-fig1.svg",
+          "alt": "DFA with states a, b, c, d, e, f. A start arrow enters a. c, d and e are accepting (double circles). Transitions: a to b on 0; b to a on 0; a to c on 1; b to d on 1; c to e on 0; c to f on 1; d to e on 0; d to f on 1; e self-loop on 0; e to f on 1; f self-loop on 0, 1."
+        }
+      ],
+      "keywords": [
+        "#TableFilling",
+        "#DFAMinimization"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q3c",
+      "section": "A",
+      "qno": 3,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "What is Kleene closure of a language? Find $L^2$, $L^3$ and $L^4$ of the language, $L = \\{0, 10\\}$.",
+      "figures": [],
+      "keywords": [
+        "#KleeneClosure"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q4a",
+      "section": "A",
+      "qno": 4,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Convert the following NFA to DFA. [Use any method you want]",
+      "figures": [
+        {
+          "src": "images/toc/2021/2021-q4a-fig1.svg",
+          "alt": "NFA with states q0, q1, q2. A start arrow enters q0. q2 is accepting (double circle). Transitions: q0 self-loop on 0; q0 to q1 on 1; q0 to q2 on 1; q1 self-loop on 0; q1 to q2 on 0, 1; q2 to q0 on 0; q2 to q1 on 0, 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q4b",
+      "section": "A",
+      "qno": 4,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Write a short note on (i). Reversal, (ii) Homomorphisms, (iii) Finiteness test.",
+      "figures": [],
+      "keywords": [
+        "#ClosureReversal",
+        "#Homomorphism",
+        "#FinitenessTest"
+      ],
+      "type": "short-note",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q4c",
+      "section": "A",
+      "qno": 4,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "Prove the three properties of pumping Lemma for regular languages.",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaRLProof",
+        "#PumpingLemmaRL"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 25,
+      "co": null,
+      "text": "Consider the grammar:\n\n$$\\begin{aligned}\nS &\\to ASA \\mid aB \\\\\nA &\\to B \\mid S \\\\\nB &\\to b \\mid \\epsilon\n\\end{aligned}$$\n\n- i) Eliminate $\\epsilon$ productions.\n- ii) Eliminate unit productions in the resulting grammar from (i).\n- iii) Eliminate useless productions in the resulting grammar from (ii).\n- iv) Put the grammar from (iii) in Chomsky Normal Form (CNF).",
+      "figures": [],
+      "keywords": [
+        "#EpsilonProductions",
+        "#UnitProductions",
+        "#UselessSymbols",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q5b",
+      "section": "B",
+      "qno": 5,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "Is Context-free language (CFL) closed under Union and Intersection? Verify your answer.",
+      "figures": [],
+      "keywords": [
+        "#CFLClosureUnion",
+        "#CFLNotIntersection",
+        "#ClosureCFL"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q6a",
+      "section": "B",
+      "qno": 6,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Find Context-free grammar for the following languages:\n\n- i) $L = \\{a^i b^j c^k \\mid i,j,k \\ge 0 \\text{ and } i + j = k\\}$\n- ii) $L = \\{a^i b^j \\mid i,j \\ge 0 \\text{ and } i \\ne 2j\\}$",
+      "figures": [],
+      "keywords": [
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q6b",
+      "section": "B",
+      "qno": 6,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Design Pushdown Automata (PDA) to accept the language:\n\n$D = \\{a^i b^j c^k \\mid i,j,k \\ge 0 \\text{ and } i = j \\text{ or } j = k\\}$.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q6c",
+      "section": "B",
+      "qno": 6,
+      "part": "c",
+      "marks": 8,
+      "co": null,
+      "text": "Write short notes on:\n\n- i) Post's Correspondence Problem\n- ii) Circuit Satisfiability Problem",
+      "figures": [],
+      "keywords": [
+        "#PCP",
+        "#SAT"
+      ],
+      "type": "short-note",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q7a",
+      "section": "B",
+      "qno": 7,
+      "part": "a",
+      "marks": 6,
+      "co": null,
+      "text": "Write the differences between Multi-track and multitape Turing Machines.",
+      "figures": [],
+      "keywords": [
+        "#MultiTrackTM",
+        "#MultiTapeTM"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q7b",
+      "section": "B",
+      "qno": 7,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "What is NP-Complete problem? Prove that \"Clique problem is NP-Complete problem\".",
+      "figures": [],
+      "keywords": [
+        "#NPHardNPComplete",
+        "#Reduction"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q7c",
+      "section": "B",
+      "qno": 7,
+      "part": "c",
+      "marks": 15,
+      "co": null,
+      "text": "Prove that \"PDAs that are accepted by final state and empty stack are equivalent.\"",
+      "figures": [],
+      "keywords": [
+        "#PDAAcceptanceEquivalence",
+        "#PNtoPF",
+        "#PFtoPN"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q8a",
+      "section": "B",
+      "qno": 8,
+      "part": "a",
+      "marks": 15,
+      "co": null,
+      "text": "Design a Turing Machine to implement \"Multiplication\" operation using subroutine copy. Stimulate the action for 000100.",
+      "figures": [],
+      "keywords": [
+        "#TMMultiplication",
+        "#TuringMachine",
+        "#TMTransition",
+        "#TMID"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q8b",
+      "section": "B",
+      "qno": 8,
+      "part": "b",
+      "marks": 12,
+      "co": null,
+      "text": "Use Pumping Lemma to show the following languages are not Context-free language:\n\n- i) $L = \\{ww \\mid w \\text{ is in } \\{0,1\\}^*\\}$\n- ii) $L = \\{a^m b^m c^n \\mid m \\le n \\le 2m\\}$",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL",
+        "#PumpingLemmaCFLExamples"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2021-q8c",
+      "section": "B",
+      "qno": 8,
+      "part": "c",
+      "marks": 8,
+      "co": null,
+      "text": "Explain the halting problem of Turing Machine.",
+      "figures": [],
+      "keywords": [
+        "#HaltingProblem",
+        "#Undecidability"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    }
+  ]
+}

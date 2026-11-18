@@ -1,0 +1,314 @@
+{
+  "subject": "toc",
+  "exam": {
+    "id": "toc-2020",
+    "year": 2020,
+    "term": "3rd Year 1st Term",
+    "paper_code": "CSE 3101",
+    "duration_hours": 1.5,
+    "full_marks": 120,
+    "answer_rule": "Any two from each section"
+  },
+  "questions": [
+    {
+      "id": "toc-2020-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power on alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Design a Deterministic Finite Automata (DFA) for the set of string over $\\{a, b\\}$ such that the length of the string $|\\omega| = 2$ i.e., length of the string is exactly 2.",
+      "figures": [],
+      "keywords": [
+        "#DFADesign",
+        "#DFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 8,
+      "co": null,
+      "text": "How can you verify whether a regular language is empty or not?",
+      "figures": [],
+      "keywords": [
+        "#EmptinessTest",
+        "#DecisionPropertiesRL"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Write regular expressions/definitions for the following languages:\n\n- i) All strings continuing no more than three $a$'s over alphabet $\\{a, b, c\\}$.\n- ii) The set of strings of 0's and 1's whose number of 0's is divisible by three and whose number of 1's is odd.\n- iii) All string of digits with at most one repeated digit.",
+      "figures": [],
+      "keywords": [
+        "#BuildingRegEx"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Convert the following NFA to DFA.",
+      "figures": [
+        {
+          "src": "images/toc/2020/2020-q2b-fig1.svg",
+          "alt": "NFA with states q0, q1, q2, labelled 'Start' at the entry arrow into q0. q1 is accepting (double circle). Transitions: q0 self-loop on 0; q0 to q1 on 0,1; q1 to q2 on 0,1; q2 self-loop on 1."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction",
+        "#LazyCreation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 7,
+      "co": null,
+      "text": "Sketch a brief argument for why any regular language can be recognized by an NFA.",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#DFAvsNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 15,
+      "co": null,
+      "text": "Let $M$ be the DFA having alphabet $\\{a, b\\}$ and the following transition diagram.\n\nGive a regular expression for $L(M)$. Use any method you want.",
+      "figures": [
+        {
+          "src": "images/toc/2020/2020-q3a-fig1.svg",
+          "alt": "DFA with states 1, 2, 3, labelled 'Start' at the entry arrow into state 1. State 2 is accepting (double circle). Transitions: 1 self-loop on a; 1 to 2 on b; 2 self-loop on a; 2 to 3 on b; 3 self-loop on a; 3 to 1 on b."
+        }
+      ],
+      "keywords": [
+        "#DFAtoRegEx"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Design a NFA that accepts set of all strings of $a$'s and $b$'s such that there are two $a$'s separated by a number of positions that is divisible by 3. Also validate the NFA of valid input.",
+      "figures": [],
+      "keywords": [
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q4a",
+      "section": "B",
+      "qno": 4,
+      "part": "a",
+      "marks": 13,
+      "co": null,
+      "text": "Given the following ambiguous CFG:\n\n$$\\begin{aligned}\nS &\\to 0A \\mid 1B \\\\\nA &\\to 0AA \\mid 1S \\mid 1 \\\\\nB &\\to 1BB \\mid 0S \\mid 0\n\\end{aligned}$$\n\n- i) Find the string $S$ generated by the grammar that has two leftmost derivations. Show the derivations.\n- ii) Find an equivalent unambiguous CFG.",
+      "figures": [],
+      "keywords": [
+        "#Ambiguity",
+        "#LeftmostRightmost",
+        "#RemovingAmbiguity"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q4b",
+      "section": "B",
+      "qno": 4,
+      "part": "b",
+      "marks": 13,
+      "co": null,
+      "text": "Define Context Free Grammar (CFG). Design a CFG for the language $L = \\{0^i 1^j 2^j \\mid i,j \\ge 0\\}$.",
+      "figures": [],
+      "keywords": [
+        "#CFGDefinition",
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q4c",
+      "section": "B",
+      "qno": 4,
+      "part": "c",
+      "marks": 4,
+      "co": null,
+      "text": "Define NP Hard and NP Complete problems.",
+      "figures": [],
+      "keywords": [
+        "#NPHardNPComplete"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 11,
+      "co": null,
+      "text": "Construct a PDA that accepts the set of palindromes over $\\{a, b\\}$.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition",
+        "#PDAExampleWWR"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q5b",
+      "section": "B",
+      "qno": 5,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Design a Turing Machine to implement \"multiplication.\" Simulate the action for 001000.",
+      "figures": [],
+      "keywords": [
+        "#TMMultiplication",
+        "#TuringMachine",
+        "#TMTransition",
+        "#TMID"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q5c",
+      "section": "B",
+      "qno": 5,
+      "part": "c",
+      "marks": 4,
+      "co": null,
+      "text": "What do you mean by Recursive Languages and Recursively Enumerable Languages?",
+      "figures": [],
+      "keywords": [
+        "#RecursiveVsRE",
+        "#RELanguages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q6a",
+      "section": "B",
+      "qno": 6,
+      "part": "a",
+      "marks": 20,
+      "co": null,
+      "text": "Consider the following grammar:\n\n$$\\begin{aligned}\nS &\\to ABCd \\\\\nA &\\to BC \\\\\nB &\\to bB \\mid \\epsilon \\\\\nC &\\to cC \\mid \\epsilon\n\\end{aligned}$$\n\n- i) Eliminate $\\epsilon$-productions.\n- ii) Eliminate unit productions.\n- iii) Put the grammar into Chomsky Normal Form (CNF).",
+      "figures": [],
+      "keywords": [
+        "#EpsilonProductions",
+        "#UnitProductions",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2020-q6b",
+      "section": "B",
+      "qno": 6,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "Using pumping lemma, show that the following language is not context-free.\n\n$L = \\{a^i b^j c^k \\mid i < j < k\\}$",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL",
+        "#PumpingLemmaCFLExamples"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    }
+  ]
+}

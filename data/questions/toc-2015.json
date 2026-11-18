@@ -1,0 +1,457 @@
+{
+  "subject": "toc",
+  "exam": {
+    "id": "toc-2015",
+    "year": 2015,
+    "term": "3rd Year 1st Term",
+    "paper_code": "CSE 3101",
+    "duration_hours": 3,
+    "full_marks": 210,
+    "answer_rule": "Any three from each section"
+  },
+  "questions": [
+    {
+      "id": "toc-2015-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 9,
+      "co": null,
+      "text": "Give a comparative discussion about alphabet, language, and power on alphabet.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#Languages",
+        "#AlphabetPowers"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Give the formal definition of Deterministic Finite Automata (DFA). Design a DFA that accepts the following language L over the alphabet $\\{0,1\\}$.\n\n$L=\\{ w \\mid w \\text{ has contains the symbol 1 at most three times}\\}$\n\nAlso give the transition diagram of that DFA.",
+      "figures": [],
+      "keywords": [
+        "#DFA",
+        "#DFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Write down the properties of Nondeterministic Finite Automata (NFA). How can you test the membership of a string? Use example.",
+      "figures": [],
+      "keywords": [
+        "#NFA",
+        "#NFAOperation"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Define $\\epsilon$-NFA. Draw an $\\epsilon$-NFA that searches KUET and STUDENT from a test document.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonNFA",
+        "#NFADesign"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Convert the following NFA into DFA using subset construction method.",
+      "figures": [
+        {
+          "src": "images/toc/2015/2015-q2b-fig1.svg",
+          "alt": "Fig. 2(b): NFA with states 0 (start), 1 and 2 (accepting, double circle). State 0 has a self-loop labelled a,b and goes to 1 on b. State 1 goes to 2 on b. State 2 has a self-loop labelled a,b."
+        }
+      ],
+      "keywords": [
+        "#SubsetConstruction"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 13,
+      "co": null,
+      "text": "Convert regular expression $(a+b)b^*(a+b)^*$ to an $\\epsilon$-NFA. Show the steps. Also Describe the extended transition function $\\hat{\\delta}$ for $\\epsilon$-NFA with suitable example.",
+      "figures": [],
+      "keywords": [
+        "#RegExToEpsilonNFA",
+        "#ExtendedTransitionNFA"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 15,
+      "co": null,
+      "text": "Let M be the DFA having alphabet $\\{a, b\\}$ and the following transition diagram:\n\nGive a regular expression for L(M). Try to keep your expression simple. (Use any method you want)",
+      "figures": [
+        {
+          "src": "images/toc/2015/2015-q3a-fig1.svg",
+          "alt": "DFA over {a,b} with states 1 (start), 2 (accepting) and 3 (accepting), both drawn as double circles. State 1: self-loop b, a to 2. State 2: self-loop b, a to 3. State 3: self-loop b, a to 1."
+        }
+      ],
+      "keywords": [
+        "#DFAtoRegEx"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "Arrow directions on the scanned diagram (2-a->3 and 3-a->1) read as the only assignment that gives each state one a and one b transition; 2 and 3 are both double circles in the photo."
+    },
+    {
+      "id": "toc-2015-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 8,
+      "co": null,
+      "text": "What is Kleene Closure of a language? Find $L^2$ and $L^3$ of the language $L=\\{1, 01\\}$.",
+      "figures": [],
+      "keywords": [
+        "#KleeneClosure",
+        "#LanguageOperators"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q3c",
+      "section": "A",
+      "qno": 3,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Write regular expression/definition for the following languages:\n\n- (i) All strings containing no more than three a's over alphabet $\\{a, b, c\\}$\n- (ii) The set of strings of 0's and 1's whose number of 0's is divisible by three and whose number of 1's is odd.\n- (iii) All string of digits with at most one repeated digit.\n- (iv) All Strings which contain no runs of a's of length greater than two over alphabet $\\{a, b, c\\}$",
+      "figures": [],
+      "keywords": [
+        "#BuildingRegEx"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q4a",
+      "section": "A",
+      "qno": 4,
+      "part": "a",
+      "marks": 11,
+      "co": null,
+      "text": "State pumping lemma. Using pumping lemma, show that the language of palindrome is not regular.",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaRL",
+        "#PumpingLemmaUsage"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q4b",
+      "section": "A",
+      "qno": 4,
+      "part": "b",
+      "marks": 9,
+      "co": null,
+      "text": "Design a Context Free Grammar (CFG) for the language $\\{ X^aY^bZ^c \\mid a=b \\text{ or } b \\neq c, \\text{ where } a, b, c \\ge 0 \\}$",
+      "figures": [],
+      "keywords": [
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q4c",
+      "section": "A",
+      "qno": 4,
+      "part": "c",
+      "marks": 15,
+      "co": null,
+      "text": "Define ambiguous grammar. Use string aabbb to find out whether the following grammar is ambiguous or not. If yes, give an equivalent unambiguous grammar.\n\n$$\\begin{aligned}\nS &\\to BS \\mid \\epsilon \\\\\nB &\\to Bb \\mid aBb \\mid ab\n\\end{aligned}$$",
+      "figures": [],
+      "keywords": [
+        "#Ambiguity",
+        "#RemovingAmbiguity"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 15,
+      "co": null,
+      "text": "Define Push Down Automata (PDA). Construct push down automata for the following languages. Acceptance either by empty stack or by final state.\n\n- (i) $L=\\{a^nb^n \\mid n \\ge 0\\}$\n- (ii) Equal number of 0's and 1's.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition",
+        "#PDAAcceptance"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q5b",
+      "section": "B",
+      "qno": 5,
+      "part": "b",
+      "marks": 8,
+      "co": null,
+      "text": "For PDA, distinguish between acceptance by final state, and by empty tack.",
+      "figures": [],
+      "keywords": [
+        "#PDAAcceptance",
+        "#PDAAcceptanceEquivalence"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q5c",
+      "section": "B",
+      "qno": 5,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Prove that \"If L be $L(P_F)$ for some PDA $P_F$ where $P_F = (Q,\\Sigma,\\Gamma,\\delta_F,q_0,z_0,F)$ then there is a PDA $P_N$ such that $L = N(P_N)$\".",
+      "figures": [],
+      "keywords": [
+        "#PFtoPN",
+        "#PDAAcceptanceEquivalence"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q6a",
+      "section": "B",
+      "qno": 6,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Define instantaneous description of a Turing Machine (TM). What is the role of checking off symbols in TM?",
+      "figures": [],
+      "keywords": [
+        "#TMID",
+        "#TM0n1n"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q6b",
+      "section": "B",
+      "qno": 6,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Design a Turing Machine (TM) M to implement the function \"Subtraction\". Simulate the action for the input 00000100.",
+      "figures": [],
+      "keywords": [
+        "#TuringMachine",
+        "#TMTransition",
+        "#TMID",
+        "#TMMonus"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q6c",
+      "section": "B",
+      "qno": 6,
+      "part": "c",
+      "marks": 13,
+      "co": null,
+      "text": "Convert the following grammar to a PDA that accepts the same language by empty stack.\n\n$$\\begin{aligned}\nS &\\to 0S1 \\mid A \\\\\nA &\\to 1A0 \\mid S \\mid \\epsilon\n\\end{aligned}$$\n\nSimulate the action for the input 0011 on the new PDA.",
+      "figures": [],
+      "keywords": [
+        "#CFGtoPDA",
+        "#PDASimulation"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q7a",
+      "section": "B",
+      "qno": 7,
+      "part": "a",
+      "marks": 10,
+      "co": null,
+      "text": "Define Chomsky Normal Form (CNF). Find a grammar in CNF equivalent to\n\n$$\\begin{aligned}\nS &\\to aAbB \\\\\nA &\\to aA / a \\\\\nB &\\to bB / b\n\\end{aligned}$$",
+      "figures": [],
+      "keywords": [
+        "#CNF",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q7b",
+      "section": "B",
+      "qno": 7,
+      "part": "b",
+      "marks": 25,
+      "co": null,
+      "text": "Consider the following grammar\n\n$$\\begin{aligned}\nS &\\to a \\mid aA \\mid B \\mid C \\\\\nA &\\to aB \\mid \\epsilon \\\\\nB &\\to Aa \\\\\nC &\\to cCD \\\\\nD &\\to ddd\n\\end{aligned}$$\n\nand simply safe order\n\n- (i) Eliminate $\\epsilon$-production.\n- (ii) Eliminate Unit Productions.\n- (iii) Eliminate Useless Symbols.\n- (iv) Put the grammar into CNF.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonProductions",
+        "#UnitProductions",
+        "#UselessSymbols",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q8a",
+      "section": "B",
+      "qno": 8,
+      "part": "a",
+      "marks": 6,
+      "co": null,
+      "text": "State Pumping lemma and its advantages?",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q8b",
+      "section": "B",
+      "qno": 8,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "Show that the following languages are not context-free:\n\n- (i) $L=\\{w \\in \\{a,b,c\\}^* : w \\text{ has equal numbers of a's and b's and c's}\\}$\n- (ii) $L=\\{a^nb^ma^n : n \\ge m\\}$",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL",
+        "#PumpingLemmaCFLExamples"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q8c",
+      "section": "B",
+      "qno": 8,
+      "part": "c",
+      "marks": 9,
+      "co": null,
+      "text": "Prove that context free languages are closed under (i) Homomorphism (ii) Reversal",
+      "figures": [],
+      "keywords": [
+        "#ClosureSubstitution",
+        "#CFLClosureReversal"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2015-q8d",
+      "section": "B",
+      "qno": 8,
+      "part": "d",
+      "marks": 10,
+      "co": null,
+      "text": "Define DPDA. Let $\\Sigma=\\{0, 1\\}$, consider the problem of testing whether a PDA accepts some string of the form $\\{ w \\in 0^*1^* \\}$. Is this problem decidable? Prove your answer.",
+      "figures": [],
+      "keywords": [
+        "#DPDA",
+        "#DecisionPropertiesCFL"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    }
+  ]
+}

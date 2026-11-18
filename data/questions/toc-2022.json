@@ -1,0 +1,465 @@
+{
+  "subject": "toc",
+  "exam": {
+    "id": "toc-2022",
+    "year": 2022,
+    "term": "3rd Year 1st Term",
+    "paper_code": "CSE 3101",
+    "duration_hours": 3,
+    "full_marks": 210,
+    "answer_rule": "Any three from each section"
+  },
+  "questions": [
+    {
+      "id": "toc-2022-q1a",
+      "section": "A",
+      "qno": 1,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Define the terms with example(s): (i) Alphabet, (ii) Power of alphabet, and (iii) Language.",
+      "figures": [],
+      "keywords": [
+        "#Alphabet",
+        "#AlphabetPowers",
+        "#Languages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q1b",
+      "section": "A",
+      "qno": 1,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Construct the equivalent DFA for the following NFA.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q1b-fig1.svg",
+          "alt": "NFA with states 1, 2, 3. A start arrow enters state 1, which is accepting (double circle); 2 and 3 are not accepting. Transitions: 1 to 2 on b; 1 to 3 on epsilon; 3 to 1 on a; 2 has a self-loop on a; 2 to 3 on a, b."
+        }
+      ],
+      "keywords": [
+        "#EliminateEpsilon",
+        "#SubsetConstruction",
+        "#ECLOSE"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q1c",
+      "section": "A",
+      "qno": 1,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Proof that for any NFA, there is a DFA $D$ such that $L(N) = L(D)$.",
+      "figures": [],
+      "keywords": [
+        "#DFANFAEquivalence",
+        "#SubsetCorrectness"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q2a",
+      "section": "A",
+      "qno": 2,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "\"If $N$ is an NFA that recognizes language $L$, then swapping the final and non-final states in $M$ does not necessarily yield a new NFA that recognizes $L$\"—justify this statement.",
+      "figures": [],
+      "keywords": [
+        "#ClosureComplement",
+        "#DFAvsNFA"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "Transcribed as printed. The last 'L' before the closing quote shows no visible complement bar (it probably should be the complement of L), and the statement says 'M' where the NFA is called N. Please confirm against the original."
+    },
+    {
+      "id": "toc-2022-q2b",
+      "section": "A",
+      "qno": 2,
+      "part": "b",
+      "marks": 5,
+      "co": null,
+      "text": "Write the significances of using extended transition function.",
+      "figures": [],
+      "keywords": [
+        "#ExtendedTransition"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q2c",
+      "section": "A",
+      "qno": 2,
+      "part": "c",
+      "marks": 22,
+      "co": null,
+      "text": "Consider the following machine D. Apply the Myhill-Nerode theorem using the Table to minimize D and then convert it to a regular expression. (The following Table represents the marking of all pairs of state $(P, Q)$ where $P \\in$ final states($F$) and $Q \\notin F$ for the given D).",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q2c-fig1.svg",
+          "alt": "Machine D: DFA with states A, B, C, D, E. A start arrow enters A. E is accepting (double circle). Transitions: A to B on 0; A to C on 1; B self-loop on 0; B to D on 1; C to B on 0; C self-loop on 1; D to B on 0; D to E on 1; E to B on 0; E to C on 1."
+        },
+        {
+          "src": "images/toc/2022/2022-q2c-fig2.svg",
+          "alt": "Table: triangular pair-marking table. Columns A, B, C, D; rows B, C, D, E. Row B: (A)=0. Row C: (A)=0, (B)=0. Row D: (A)=0, (B)=0, (C)=0. Row E: (A)=1, (B)=1, (C)=1, (D)=1."
+        }
+      ],
+      "keywords": [
+        "#DFAMinimization",
+        "#TableFilling",
+        "#DFAtoRegEx"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q3a",
+      "section": "A",
+      "qno": 3,
+      "part": "a",
+      "marks": 10,
+      "co": null,
+      "text": "Suppose, $R$ be a regular expression that has length $n$ (the length of a regular expression is the number of symbols it contains, including members of $\\Sigma$, operation symbols, and parenthesis. For example, the regular expression $(01^*)0$ has length 6). If $R$ is converted to an equivalent NFA $N$, then determine how many states would $N$ have? Answer this question by giving an approximate bound on the number of states in $N$.",
+      "figures": [],
+      "keywords": [
+        "#RegExToEpsilonNFA",
+        "#FAandRegEx"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q3b",
+      "section": "A",
+      "qno": 3,
+      "part": "b",
+      "marks": 14,
+      "co": null,
+      "text": "Let $\\Sigma_m = \\{a_1, \\cdots, a_m\\}$ be an alphabet containing $m$ elements for some integer $m \\ge 1$. Let $L_m$ be the following language:\n\n\"Accepts all strings which at least one $a_i$ occurs an even number of times (not necessarily consecutively), where $1 \\le i \\le m$.\" The following figure shows an NFA for the language $L_2$. Construct an NFA for the language $L_3$ that has at most 7 states.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q3b-fig1.svg",
+          "alt": "NFA for L_2 with states 1 to 5. A start arrow enters state 1. States 2 and 3 are accepting (double circles). Transitions: 1 to 2 on epsilon; 1 to 3 on epsilon; 2 self-loop on a2; 2 to 4 on a1; 4 to 2 on a1; 4 self-loop on a2; 3 self-loop on a1; 3 to 5 on a2; 5 to 3 on a2; 5 self-loop on a1."
+        }
+      ],
+      "keywords": [
+        "#NFADesign",
+        "#EpsilonNFA"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q3c",
+      "section": "A",
+      "qno": 3,
+      "part": "c",
+      "marks": 11,
+      "co": null,
+      "text": "You want to establish an account with an on-line service, for which you need to choose a password. They require that your password contain at least eight symbols, including at least two different letters, at least two digits, and at least one special symbol. Generate a regular expression that accepts exactly the string that satisfy these requirements, which you can use to test your password choice for validity. For simplicity, assume that the set of possible symbols is $\\{a, b, c, d, 0, 1, \\#, \\$\\}$, of which $a, b, c$ and $d$ are letters, $0$ and $1$ are digits, and $\\#$ and $\\$$ are special symbols.",
+      "figures": [],
+      "keywords": [
+        "#BuildingRegEx"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q4a",
+      "section": "A",
+      "qno": 4,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Consider the following machine N.\n\nConstruct the tree for input 1001101.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q4a-fig1.svg",
+          "alt": "Machine N: NFA with epsilon transitions, states q1, q2, q3, q4. A start arrow enters q1. q4 is accepting (double circle). Transitions: q1 self-loop on 0,1; q1 to q2 on 0; q2 to q3 on 1 and on epsilon; q3 to q4 on 1; q4 self-loop on 0,1."
+        }
+      ],
+      "keywords": [
+        "#EpsilonNFASimulation",
+        "#NFAOperation"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": true,
+      "review_note": "The marks '(08' are partly hidden by a black stroke at the page edge (closing bracket not visible). Read as 8; this makes Q4 sum to 35 like every other question."
+    },
+    {
+      "id": "toc-2022-q4b",
+      "section": "A",
+      "qno": 4,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Convert the following finite automata to an equivalent regular expression with ripping states order 3, 2, 1.",
+      "figures": [
+        {
+          "src": "images/toc/2022/2022-q4b-fig1.svg",
+          "alt": "Finite automaton with states 1, 2, 3. A start arrow enters state 1. States 2 and 3 are accepting (double circles). Transitions: 1 to 2 on a; 2 to 1 on a; 2 self-loop on b; 1 to 3 on b; 3 to 1 on b; 3 to 2 on a."
+        }
+      ],
+      "keywords": [
+        "#DFAtoRegEx",
+        "#FAandRegEx"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q4c",
+      "section": "A",
+      "qno": 4,
+      "part": "c",
+      "marks": 12,
+      "co": null,
+      "text": "Using Pumping lemma, show that the following languages are not regular.\n\n- i) $\\{1^p \\mid p \\text{ is a prime number}\\}$,\n- ii) $\\{0^n \\mid n \\text{ is a perfect square}\\}$.",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaRL",
+        "#PumpingLemmaExamples",
+        "#ProvingNonRegular"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q5a",
+      "section": "B",
+      "qno": 5,
+      "part": "a",
+      "marks": 20,
+      "co": null,
+      "text": "Consider the grammar:\n\n$$\\begin{aligned}\nS &\\to AaA \\mid CA \\mid BaB \\\\\nA &\\to aaBa \\mid CDA \\mid aa \\mid DC \\\\\nC &\\to Ca \\mid bC \\mid D \\\\\nD &\\to bD \\mid \\epsilon\n\\end{aligned}$$\n\n- i) Eliminate $\\epsilon$-productions,\n- ii) Eliminate unit productions from the resulting grammar from (i),\n- iii) Eliminate useless productions from the resulting grammar from (ii),\n- iv) Convert the grammar from (iii) into Chomsky Normal Form.",
+      "figures": [],
+      "keywords": [
+        "#EpsilonProductions",
+        "#UnitProductions",
+        "#UselessSymbols",
+        "#CNFConversion"
+      ],
+      "type": "conversion",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q5b",
+      "section": "B",
+      "qno": 5,
+      "part": "b",
+      "marks": 15,
+      "co": null,
+      "text": "Interpret the characteristics of a Context-free grammar (CFG) must hold to generate a regular language. Demonstrate them by generating CFG for regular expression:\n\n\"$(0 + 1)^* 12 (2 + 3)^*$\"",
+      "figures": [],
+      "keywords": [
+        "#RightLinearCFG",
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q6a",
+      "section": "B",
+      "qno": 6,
+      "part": "a",
+      "marks": 15,
+      "co": null,
+      "text": "Consider the problem of checking a string whether belong to the language $L = \\{0^n 1^{2n} \\mid n \\ge 0\\}$ using Turing machine. State if the problem is decidable.",
+      "figures": [],
+      "keywords": [
+        "#TuringMachine",
+        "#TMTransition",
+        "#TM0n1n"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q6b",
+      "section": "B",
+      "qno": 6,
+      "part": "b",
+      "marks": 10,
+      "co": null,
+      "text": "State Boolean satisfiability problem is NP complete problem.",
+      "figures": [],
+      "keywords": [
+        "#SAT",
+        "#NPHardNPComplete"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q6c",
+      "section": "B",
+      "qno": 6,
+      "part": "c",
+      "marks": 10,
+      "co": null,
+      "text": "Define ambiguity in Context-free Grammar. For the grammar:\n\n$$\\begin{aligned}\nS &\\to SaS \\mid b\n\\end{aligned}$$\n\nMention the techniques to resolve the ambiguity.",
+      "figures": [],
+      "keywords": [
+        "#Ambiguity",
+        "#RemovingAmbiguity"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q7a",
+      "section": "B",
+      "qno": 7,
+      "part": "a",
+      "marks": 12,
+      "co": null,
+      "text": "Generate Context-free Grammar that supports:\n\n- i) Following markup text in below figure,\n- ii) A language containing all binary strings with even number of '0's.\n\n```html\n<html>\n<div id = \"container\" class = \"main\" >\nThis is some text.\n<div id = \"inner\" >\nThis is inner text.\n</div>\n</div>\n</html>\n```",
+      "figures": [],
+      "keywords": [
+        "#TagMarkup",
+        "#CFGExamples"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q7b",
+      "section": "B",
+      "qno": 7,
+      "part": "b",
+      "marks": 8,
+      "co": null,
+      "text": "Compare how recursive and recursively enumerable language acts differently on Turing machine.",
+      "figures": [],
+      "keywords": [
+        "#RecursiveVsRE",
+        "#RELanguages"
+      ],
+      "type": "theory",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q7c",
+      "section": "B",
+      "qno": 7,
+      "part": "c",
+      "marks": 15,
+      "co": null,
+      "text": "Suppose, you and your friend are playing a game where there are 'k' spots. Each spot has balls of same color. Each of you simultaneously picks a (single) ball from each spot and approach forward. You start from first spot and your friend from last spot to first spot. Determine using Turing machine with storage if both of you have chosen balls of same color in same sequence when you meet at the middle spot.",
+      "figures": [],
+      "keywords": [
+        "#TMStorage",
+        "#TuringMachine",
+        "#TMTransition"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q8a",
+      "section": "B",
+      "qno": 8,
+      "part": "a",
+      "marks": 8,
+      "co": null,
+      "text": "Use the languages $A = \\{a^m b^n c^n \\mid m,n \\ge 0\\}$ and $B = \\{a^n b^n c^m \\mid m,n \\ge 0\\}$ to show whether Context-free language is closed under intersection and union.",
+      "figures": [],
+      "keywords": [
+        "#CFLNotIntersection",
+        "#CFLClosureUnion",
+        "#ClosureCFL"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q8b",
+      "section": "B",
+      "qno": 8,
+      "part": "b",
+      "marks": 7,
+      "co": null,
+      "text": "Define Pumping lemma for CFG. Show $L = \\{0^i 1^j \\mid j = i^2\\}$ is not context-free grammar using Pumping lemma.",
+      "figures": [],
+      "keywords": [
+        "#PumpingLemmaCFL",
+        "#PumpingLemmaCFLExamples"
+      ],
+      "type": "proof",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    },
+    {
+      "id": "toc-2022-q8c",
+      "section": "B",
+      "qno": 8,
+      "part": "c",
+      "marks": 20,
+      "co": null,
+      "text": "Create Pushdown automata (PDA) for $L = \\{a^i b^j c^k \\mid i \\ne j + k\\}$.\n\nConvert your PDA to CFG.",
+      "figures": [],
+      "keywords": [
+        "#PDADefinition",
+        "#PDATransition",
+        "#PDAtoCFG"
+      ],
+      "type": "design",
+      "repeat_group": null,
+      "needs_review": false,
+      "review_note": null
+    }
+  ]
+}
