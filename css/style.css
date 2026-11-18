@@ -426,6 +426,11 @@ main.wrap { padding-top: 16px; padding-bottom: 64px; min-height: 70vh; }
 }
 
 /* ---------- Profile page ---------- */
+.storage-warn {
+  background: var(--warn-bg); color: var(--warn-ink); border: 1px solid #ffd78a;
+  border-radius: var(--radius); padding: 12px 16px; margin-bottom: 16px; font-size: .92rem;
+}
+.storage-warn p { margin: 0; }
 .profile-head { margin-bottom: 20px; }
 .profile-stats-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

@@ -3,7 +3,7 @@
 //  * navigate mode (other pages): Enter / button opens the search page; while typing, matching keywords
 //    are suggested in a dropdown (debounced).
 import { SEARCH_DEBOUNCE_MS } from './config.js';
-import { h, debounce, hashUrl, plural } from './util.js';
+import { h, debounce, hashUrl, plural, navigateTo } from './util.js';
 import { matchingKeywords } from './search.js';
 
 let uid = 0;
@@ -50,7 +50,7 @@ export function renderSearchBar(ds, opts = {}) {
     showSuggest.cancel();
     hideSuggest();
     if (opts.onLive) opts.onLive(input.value);
-    else location.hash = searchUrl(ds, input.value.trim());
+    else navigateTo(searchUrl(ds, input.value.trim()));
   });
 
   form.input = input;

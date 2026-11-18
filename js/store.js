@@ -167,4 +167,83 @@ export function getFavoriteIds(subjectId) {
   return [...loadFavorites(subjectId)];
 }
 
+// ---- Storage Health & Backup / Restore -------------------------------------
+
+export function isStorageAvailable() {
+  try {
+    const test = '__qbank_storage_test__';
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+export function exportBackup() {
+  const data = {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    solved: {},
+    favorites: {},
+    solutions: {},
+  };
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || !k.startsWith(STORAGE_PREFIX)) continue;
+      const subKey = k.slice(STORAGE_PREFIX.length);
+      const [type, subjectId] = subKey.split(':');
+      if (!subjectId) continue;
+      const raw = localStorage.getItem(k);
+      if (!raw) continue;
+      try {
+        const val = JSON.parse(raw);
+        if (type === 'solved') data.solved[subjectId] = val;
+        else if (type === 'favorites') data.favorites[subjectId] = val;
+        else if (type === 'solutions') data.solutions[subjectId] = val;
+      } catch (e) { /* ignore corrupt */ }
+    }
+  } catch (e) { /* ignore */ }
+  return data;
+}
+
+export function importBackup(data) {
+  if (!data || typeof data !== 'object') throw new Error('Invalid backup file');
+  if (data.solved && typeof data.solved === 'object') {
+    for (const [sid, list] of Object.entries(data.solved)) {
+      if (Array.isArray(list)) {
+        try {
+          localStorage.setItem(key(sid), JSON.stringify(list));
+        } catch (e) { /* ignore */ }
+        memory.set(sid, new Set(list));
+      }
+    }
+  }
+  if (data.favorites && typeof data.favorites === 'object') {
+    for (const [sid, list] of Object.entries(data.favorites)) {
+      if (Array.isArray(list)) {
+        try {
+          localStorage.setItem(favKey(sid), JSON.stringify(list));
+        } catch (e) { /* ignore */ }
+        favMemory.set(sid, new Set(list));
+      }
+    }
+  }
+  if (data.solutions && typeof data.solutions === 'object') {
+    for (const [sid, dict] of Object.entries(data.solutions)) {
+      if (dict && typeof dict === 'object') {
+        try {
+          localStorage.setItem(solKey(sid), JSON.stringify(dict));
+        } catch (e) { /* ignore */ }
+        solMemory.set(sid, dict);
+      }
+    }
+  }
+  listeners.forEach((fn) => fn());
+  favListeners.forEach((fn) => fn());
+  solListeners.forEach((fn) => fn());
+}
+
+
 

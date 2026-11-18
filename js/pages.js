@@ -1,10 +1,10 @@
 // The four pages: home, subject, lecture, search (plus a not-found page).
-import { h, plural, prettyType, hashUrl, replaceHash, kwKey, cmpQuestions, cmpQuestionsOldestFirst } from './util.js';
+import { h, plural, prettyType, hashUrl, replaceHash, kwKey, cmpQuestions, cmpQuestionsOldestFirst, navigateTo } from './util.js';
 import { loadSubjects, loadSubject } from './data.js';
 import { search, popularKeywords } from './search.js';
 import { renderSearchBar, searchUrl } from './searchbar.js';
 import { mountCardList } from './card.js';
-import { solvedCount, isSolved, hasSolution, solutionCount, isFavorite, favoriteCount } from './store.js';
+import { solvedCount, isSolved, hasSolution, solutionCount, isFavorite, favoriteCount, isStorageAvailable, exportBackup, importBackup } from './store.js';
 
 const SUBJECT_TITLE = 'Question Bank';
 
@@ -84,7 +84,7 @@ export async function subjectPage(root, id) {
   }));
 
   root.replaceChildren(
-    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name }]),
+    crumbs([{ label: 'Home', href: '/home' }, { label: ds.subject.name }]),
     h('div', { class: 'page-head' },
       h('h1', null, ds.subject.name),
       h('p', { class: 'muted' }, [subjectCodes(ds.subject), plural(ds.questions.length, 'question'), `exams ${yearText(ds)}`].filter(Boolean).join(' · ')),
@@ -175,7 +175,7 @@ export async function lecturePage(root, id, num, params) {
         update();
         countLine.scrollIntoView({ block: 'start', behavior: 'smooth' });
       } else {
-        location.hash = searchUrl(ds, info.keyword, info.keyword);
+        navigateTo(searchUrl(ds, info.keyword, info.keyword));
       }
     },
     onSolved: () => (state.hide ? update() : updateCount()),
@@ -255,7 +255,7 @@ export async function lecturePage(root, id, num, params) {
     next ? h('a', { class: 'btn', href: hashUrl(['s', id, 'l', next.lecture]) }, `Lecture ${next.lecture} →`) : h('span'));
 
   root.replaceChildren(
-    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name, href: hashUrl(['s', id]) }, { label: `Lecture ${lec.lecture}` }]),
+    crumbs([{ label: 'Home', href: '/home' }, { label: ds.subject.name, href: hashUrl(['s', id]) }, { label: `Lecture ${lec.lecture}` }]),
     h('div', { class: 'page-head' },
       h('p', { class: 'eyebrow' }, `Lecture ${lec.lecture}`),
       h('h1', null, lec.title),
@@ -360,7 +360,7 @@ export async function searchPage(root, id, params) {
   }
 
   root.replaceChildren(
-    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name, href: hashUrl(['s', id]) }, { label: 'Search' }]),
+    crumbs([{ label: 'Home', href: '/home' }, { label: ds.subject.name, href: hashUrl(['s', id]) }, { label: 'Search' }]),
     h('div', { class: 'page-head' }, h('h1', null, 'Search'), bar),
     kwBox, info, searchControls, list);
   update();
@@ -410,6 +410,45 @@ export async function profilePage(root, subjectId, params) {
       update();
     },
   });
+
+  const fileInput = h('input', {
+    type: 'file', accept: '.json', style: 'display: none;',
+    onchange: async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const json = JSON.parse(text);
+        importBackup(json);
+        update();
+        alert('Progress restored successfully!');
+      } catch (err) {
+        alert('Failed to restore backup: ' + err.message);
+      }
+      fileInput.value = '';
+    },
+  });
+
+  const btnBackup = h('button', {
+    type: 'button', class: 'btn',
+    title: 'Download a JSON backup of your solved, favorited, and custom solution data',
+    onclick: () => {
+      const data = exportBackup();
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = h('a', { href: url, download: `qbank-progress-${new Date().toISOString().slice(0, 10)}.json` });
+      document.body.append(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    },
+  }, '💾 Backup');
+
+  const btnRestore = h('button', {
+    type: 'button', class: 'btn',
+    title: 'Restore progress from a saved backup JSON file',
+    onclick: () => fileInput.click(),
+  }, '📥 Restore');
 
   const tabFav = h('button', {
     type: 'button', class: 'profile-tab-btn',
@@ -525,15 +564,22 @@ export async function profilePage(root, subjectId, params) {
     }));
   }
 
-  const profileToolbar = h('div', { class: 'profile-toolbar' }, tabsNav, h('div', { class: 'profile-actions' }, toggleAllSolBtn, orderBtn));
+  const storageWarn = !isStorageAvailable()
+    ? h('div', { class: 'storage-warn' },
+        h('p', null, h('strong', null, '⚠️ Storage is blocked in this browser tab: '), 'Your browser is restricting localStorage (common in incognito/private mode, in-app browsers, or privacy shields). Changes will not persist across refreshes. Open in a standard browser window or use Backup/Restore below to keep your data.'))
+    : null;
+
+  const profileToolbar = h('div', { class: 'profile-toolbar' }, tabsNav, h('div', { class: 'profile-actions' }, btnBackup, btnRestore, toggleAllSolBtn, orderBtn));
 
   root.replaceChildren(
-    crumbs([{ label: 'Home', href: '#/' }, { label: ds.subject.name, href: hashUrl(['s', sid]) }, { label: 'Archive' }]),
+    crumbs([{ label: 'Home', href: '/home' }, { label: ds.subject.name, href: hashUrl(['s', sid]) }, { label: 'Archive' }]),
+    storageWarn,
     h('div', { class: 'page-head profile-head' },
       h('h1', null, 'Archive & Saved Questions'),
       h('p', { class: 'muted' }, `${ds.subject.name} · Track your revision progress and bookmarked questions.`)),
     statsGrid,
     profileToolbar,
+    fileInput,
     countLine,
     list);
 
@@ -543,7 +589,7 @@ export async function profilePage(root, subjectId, params) {
 // ============================================================================
 // Not found
 // ============================================================================
-export function notFoundPage(root, message = 'That page does not exist.', href = '#/', label = 'Back to home') {
+export function notFoundPage(root, message = 'That page does not exist.', href = '/home', label = 'Back to home') {
   setTitle('Not found');
   root.replaceChildren(h('div', { class: 'empty-state' },
     h('h1', null, 'Not found'), h('p', null, message), h('a', { class: 'btn primary', href }, label)));

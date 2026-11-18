@@ -77,9 +77,28 @@ export function withHash(kw) {
   return s.startsWith('#') ? s : '#' + s;
 }
 
-/** Build a hash URL like "#/s/toc/l/5?k=%23DFA". Params with empty values are dropped. */
+/** Build clean path URLs like "/toc/lec_05?k=%23DFA", "/toc", "/archive". */
 export function hashUrl(pathParts, params) {
-  const path = '#/' + pathParts.map(encodeURIComponent).join('/');
+  let path = '';
+  if (!pathParts || pathParts.length === 0) {
+    path = '/home';
+  } else if (pathParts[0] === 's' && pathParts.length === 2) {
+    // Subject page: /toc
+    path = `/${encodeURIComponent(pathParts[1])}`;
+  } else if (pathParts[0] === 's' && pathParts[2] === 'l' && pathParts.length >= 4) {
+    // Lecture page: /toc/lec_01
+    const lecNum = String(pathParts[3]).padStart(2, '0');
+    path = `/${encodeURIComponent(pathParts[1])}/lec_${lecNum}`;
+  } else if (pathParts[0] === 's' && (pathParts[2] === 'search' || pathParts[2] === 'archive')) {
+    path = `/${encodeURIComponent(pathParts[1])}/${pathParts[2]}`;
+  } else if (pathParts[0] === 'archive') {
+    path = '/archive';
+  } else if (pathParts[0] === 'home') {
+    path = '/home';
+  } else {
+    path = '/' + pathParts.map(encodeURIComponent).join('/');
+  }
+
   const usp = new URLSearchParams();
   for (const [k, v] of Object.entries(params || {})) {
     if (v !== null && v !== undefined && v !== '' && v !== false) usp.set(k, v === true ? '1' : v);
@@ -88,10 +107,22 @@ export function hashUrl(pathParts, params) {
   return qs ? `${path}?${qs}` : path;
 }
 
+export const pathUrl = hashUrl;
+
+/** Navigate to a URL using HTML5 History API without a full page reload */
+export function navigateTo(url) {
+  if (location.pathname + location.search !== url) {
+    history.pushState(null, '', url);
+  }
+  window.dispatchEvent(new PopStateEvent('popstate'));
+}
+
 /** Change the URL without triggering the router (used for filter state). */
 export function replaceHash(url) {
   history.replaceState(null, '', url);
 }
+
+export const replaceUrl = replaceHash;
 
 export function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'auto' });
