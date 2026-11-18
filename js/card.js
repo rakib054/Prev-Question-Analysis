@@ -132,9 +132,6 @@ export function renderCard(q, ctx) {
 
   if (isFav) badges.prepend(favBadge);
 
-  const solBadge = h('span', { class: 'badge sol-badge', title: 'Solution available' }, '📚 Solution');
-  if (hasSolution(ds.id, q)) badges.append(solBadge);
-
   if (SHOW_REVIEW_FLAGS && q.needs_review) {
     badges.append(q.review_note
       ? h('details', { class: 'review' }, h('summary', { class: 'badge warn' }, '⚠ unverified'), h('p', { class: 'review-note' }, q.review_note))
@@ -292,7 +289,6 @@ export function renderCard(q, ctx) {
     if (hasSol) {
       solHeaderActions.append(btnEdit, btnCopy, btnDelete);
       solBody.replaceChildren(h('div', { class: 'md', html: renderMarkdown(text) }));
-      if (!badges.contains(solBadge)) badges.append(solBadge);
       solToggle.classList.add('has-sol');
       solToggleText.textContent = 'Solution';
     } else {
@@ -305,7 +301,6 @@ export function renderCard(q, ctx) {
         h('div', { class: 'sol-empty' },
           h('p', null, 'No solution has been added for this question yet.'),
           btnAddSol));
-      solBadge.remove();
       solToggle.classList.remove('has-sol');
       solToggleText.textContent = 'Add solution';
     }
