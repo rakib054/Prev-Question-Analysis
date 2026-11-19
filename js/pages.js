@@ -108,9 +108,9 @@ export async function lecturePage(root, id, num, params) {
   // ---- state (mirrored in the URL so links can be shared) ----
   const state = {
     kws: new Set((params.get('k') || '').split(',').map(kwKey).filter((k) => topicKeys.has(k))),
+    multiKw: params.get('multi') === '1',
     year: years.map(String).includes(params.get('year')) ? params.get('year') : '',
     type: types.includes(params.get('type')) ? params.get('type') : '',
-    rep: params.get('rep') === '1',
     hide: params.get('hide') === '1',
     hasSol: params.get('sol') === '1',
     showAllSol: params.get('showsol') === '1',
@@ -120,27 +120,78 @@ export async function lecturePage(root, id, num, params) {
   const passesBase = (q) =>
     (!state.year || String(q.year) === state.year) &&
     (!state.type || q.type === state.type) &&
-    (!state.rep || q.repeat) &&
     (!state.hide || !isSolved(id, q.id)) &&
     (!state.hasSol || hasSolution(id, q));
   const hasKw = (q, key) => q.kw.some((info) => info.key === key);
-  const filtersActive = () => state.kws.size || state.year || state.type || state.rep || state.hide || state.hasSol;
+  const filtersActive = () => state.kws.size || state.year || state.type || state.hide || state.hasSol;
+
+  // Sidebar collapsed state (persisted across lectures)
+  let isSidebarCollapsed = false;
+  try {
+    isSidebarCollapsed = localStorage.getItem('qbank:sidebar_collapsed') === '1';
+  } catch (e) {}
 
   // ---- static parts ----
   const bar = renderSearchBar(ds);
   const sidebarList = h('ul', { class: 'kw-list' });
-  const allBtn = h('button', { type: 'button', class: 'kw-all', onclick: () => { state.kws.clear(); update(); } });
+  const allBtn = h('button', { type: 'button', class: 'kw-all', onclick: () => {
+    state.kws.clear();
+    if (!state.multiKw && window.matchMedia('(max-width: 899px)').matches) setOpen(false);
+    update();
+  } });
+  const multiCheck = h('input', {
+    type: 'checkbox',
+    id: 'kw-multi-check',
+    class: 'kw-multi-check',
+    onchange: (e) => {
+      state.multiKw = e.target.checked;
+      if (!state.multiKw && state.kws.size > 1) {
+        state.kws = new Set([[...state.kws][0]]);
+      }
+      update();
+    },
+  });
+  const multiLabel = h('label', { class: 'kw-multi-label', for: 'kw-multi-check' },
+    multiCheck,
+    h('span', null, 'Select multiple')
+  );
+  const kwToolbar = h('div', { class: 'kw-toolbar' }, multiLabel);
+
+  const collapseBtn = h('button', {
+    type: 'button',
+    class: 'kw-collapse-btn',
+    title: 'Collapse keywords sidebar',
+    'aria-label': 'Collapse keywords sidebar',
+    html: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>',
+    onclick: (e) => {
+      e.stopPropagation();
+      setSidebarCollapsed(true);
+    },
+  });
+
   const toggle = h('button', { type: 'button', class: 'kw-toggle', 'aria-expanded': 'false', 'aria-controls': 'kw-body' });
-  const body = h('div', { class: 'kw-body', id: 'kw-body' }, allBtn, sidebarList);
-  const panel = h('aside', { class: 'kw-panel', 'aria-label': 'Keywords in this lecture' }, toggle, body);
+  const head = h('div', { class: 'kw-head' }, collapseBtn, toggle);
+  const body = h('div', { class: 'kw-body', id: 'kw-body' }, kwToolbar, allBtn, sidebarList);
+  const panel = h('aside', { class: 'kw-panel', 'aria-label': 'Keywords in this lecture' }, head, body);
   const setOpen = (open) => { panel.classList.toggle('open', open); toggle.setAttribute('aria-expanded', String(open)); };
   toggle.addEventListener('click', () => setOpen(!panel.classList.contains('open')));
+
+  const expandBtn = h('button', {
+    type: 'button',
+    class: 'btn kw-expand-btn',
+    title: 'Show keywords menu',
+    'aria-label': 'Show keywords menu',
+    onclick: () => setSidebarCollapsed(false),
+  },
+    h('span', { class: 'kw-expand-icon', 'aria-hidden': 'true', html: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>' }),
+    h('span', { class: 'kw-expand-text' }, state.kws.size ? `Keywords (${state.kws.size})` : 'Keywords')
+  );
+  expandBtn.hidden = !isSidebarCollapsed;
 
   const yearSel = h('select', { 'aria-label': 'Filter by year', onchange: (e) => { state.year = e.target.value; update(); } },
     h('option', { value: '' }, 'All years'), years.map((y) => h('option', { value: String(y) }, String(y))));
   const typeSel = h('select', { 'aria-label': 'Filter by type', onchange: (e) => { state.type = e.target.value; update(); } },
     h('option', { value: '' }, 'All types'), types.map((t) => h('option', { value: t }, prettyType(t))));
-  const repBox = h('input', { type: 'checkbox', onchange: (e) => { state.rep = e.target.checked; update(); } });
   const hideBox = h('input', { type: 'checkbox', onchange: (e) => { state.hide = e.target.checked; update(); } });
   const solBox = h('input', { type: 'checkbox', onchange: (e) => { state.hasSol = e.target.checked; update(); } });
   const toggleAllSolBtn = h('button', {
@@ -151,12 +202,12 @@ export async function lecturePage(root, id, num, params) {
     },
   });
   const orderBtn = h('button', { type: 'button', class: 'btn', onclick: () => { state.oldest = !state.oldest; update(); } });
-  const clearBtn = h('button', { type: 'button', class: 'btn ghost', onclick: () => { state.kws.clear(); state.year = ''; state.type = ''; state.rep = false; state.hide = false; state.hasSol = false; update(); } }, 'Clear filters');
+  const clearBtn = h('button', { type: 'button', class: 'btn ghost', onclick: () => { state.kws.clear(); state.year = ''; state.type = ''; state.hide = false; state.hasSol = false; update(); } }, 'Clear filters');
 
   const filters = h('div', { class: 'filters' },
+    expandBtn,
     h('label', { class: 'field' }, h('span', null, 'Year'), yearSel),
     h('label', { class: 'field' }, h('span', null, 'Type'), typeSel),
-    h('label', { class: 'check' }, repBox, h('span', null, 'Only repeated')),
     h('label', { class: 'check' }, hideBox, h('span', null, 'Hide solved')),
     h('label', { class: 'check' }, solBox, h('span', null, 'Has solution')),
     toggleAllSolBtn, orderBtn, clearBtn);
@@ -165,13 +216,30 @@ export async function lecturePage(root, id, num, params) {
   const list = h('div', { class: 'qlist' });
   let stopList = () => {};
 
+  const layout = h('div', { class: 'lecture-layout' + (isSidebarCollapsed ? ' sidebar-collapsed' : '') },
+    panel,
+    h('section', { class: 'results', 'aria-label': 'Questions' }, filters, countLine, list));
+
+  function setSidebarCollapsed(collapsed) {
+    isSidebarCollapsed = collapsed;
+    try {
+      localStorage.setItem('qbank:sidebar_collapsed', collapsed ? '1' : '0');
+    } catch (e) {}
+    layout.classList.toggle('sidebar-collapsed', isSidebarCollapsed);
+    expandBtn.hidden = !isSidebarCollapsed;
+  }
+
   const ctx = {
     ds,
     showLectures: false,
     showAllSolutions: false,
     onKeyword: (info) => {
       if (topicKeys.has(info.key)) {
-        state.kws = new Set([info.key]);
+        if (state.multiKw) {
+          state.kws.add(info.key);
+        } else {
+          state.kws = new Set([info.key]);
+        }
         update();
         countLine.scrollIntoView({ block: 'start', behavior: 'smooth' });
       } else {
@@ -202,6 +270,13 @@ export async function lecturePage(root, id, num, params) {
     allBtn.classList.toggle('active', state.kws.size === 0);
     allBtn.setAttribute('aria-pressed', String(state.kws.size === 0));
     toggle.replaceChildren(h('span', null, 'Keywords'), h('span', { class: 'count' }, state.kws.size ? `${state.kws.size} selected` : String(lec.topics.length)), h('span', { class: 'chev', 'aria-hidden': 'true' }, '▾'));
+    multiCheck.checked = state.multiKw;
+    multiLabel.classList.toggle('active', state.multiKw);
+    expandBtn.replaceChildren(
+      h('span', { class: 'kw-expand-icon', 'aria-hidden': 'true', html: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>' }),
+      h('span', { class: 'kw-expand-text' }, state.kws.size ? `Keywords (${state.kws.size})` : 'Keywords')
+    );
+    expandBtn.hidden = !isSidebarCollapsed;
 
     sidebarList.replaceChildren(...lec.topics.map((t) => {
       const key = kwKey(t.keyword);
@@ -210,8 +285,12 @@ export async function lecturePage(root, id, num, params) {
       return h('li', null, h('button', {
         type: 'button', class: 'kw-item' + (on ? ' active' : '') + (n === 0 ? ' dim' : ''), 'aria-pressed': String(on),
         onclick: () => {
-          if (on) state.kws.delete(key); else state.kws.add(key);
-          if (window.matchMedia('(max-width: 899px)').matches) setOpen(false);
+          if (state.multiKw) {
+            if (on) state.kws.delete(key); else state.kws.add(key);
+          } else {
+            if (on) state.kws.clear(); else state.kws = new Set([key]);
+          }
+          if (!state.multiKw && window.matchMedia('(max-width: 899px)').matches) setOpen(false);
           update();
         },
       }, h('span', { class: 'kw-text' }, h('span', { class: 'kw-name' }, t.name), h('span', { class: 'kw-tag' }, t.keyword)),
@@ -219,7 +298,7 @@ export async function lecturePage(root, id, num, params) {
     }));
 
     yearSel.value = state.year; typeSel.value = state.type;
-    repBox.checked = state.rep; hideBox.checked = state.hide;
+    hideBox.checked = state.hide;
     solBox.checked = state.hasSol;
     toggleAllSolBtn.textContent = state.showAllSol ? 'Hide solutions 📚' : 'Show solutions 📚';
     toggleAllSolBtn.setAttribute('aria-pressed', String(state.showAllSol));
@@ -243,8 +322,9 @@ export async function lecturePage(root, id, num, params) {
 
     replaceHash(hashUrl(['s', id, 'l', num], {
       k: [...state.kws].map((k) => ds.kwInfo.get(k)?.keyword || k).join(','),
-      year: state.year, type: state.type, rep: state.rep, hide: state.hide,
+      year: state.year, type: state.type, hide: state.hide,
       sol: state.hasSol ? '1' : '', showsol: state.showAllSol ? '1' : '', order: state.oldest ? 'old' : '',
+      multi: state.multiKw ? '1' : '',
     }));
   }
 
@@ -260,7 +340,7 @@ export async function lecturePage(root, id, num, params) {
       h('p', { class: 'eyebrow' }, `Lecture ${lec.lecture}`),
       h('h1', null, lec.title),
       bar),
-    h('div', { class: 'lecture-layout' }, panel, h('section', { class: 'results', 'aria-label': 'Questions' }, filters, countLine, list)),
+    layout,
     pager);
   update();
 }
